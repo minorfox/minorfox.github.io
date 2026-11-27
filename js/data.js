@@ -19,12 +19,11 @@ window.SITE_DATA = {
 
   nav: [
     { id: 'home', icon: 'home', zh: '首页', en: 'Home' },
-    { id: 'about', icon: 'user', zh: '关于', en: 'About' },
     { id: 'news', icon: 'news', zh: '动态', en: 'News' },
     { id: 'publications', icon: 'book', zh: '论文', en: 'Publications' },
     { id: 'projects', icon: 'code', zh: '开源', en: 'Open Source' },
     { id: 'resume', icon: 'file', zh: '履历', en: 'Resume' },
-    { id: 'service', icon: 'award', zh: '服务', en: 'Service' },
+    { id: 'service', icon: 'award', zh: '招生', en: 'Opening' },
     { id: 'contact', icon: 'mail', zh: '联系', en: 'Contact' },
   ],
 
@@ -78,14 +77,12 @@ window.SITE_DATA = {
     },
     bio: {
       zh: [
-        '黄鹂，工学博士，2021 年 6 月毕业于电子科技大学计算机科学与工程学院（硕博连读），现任西南财经大学计算机与人工智能学院副教授、硕士生导师、人工智能系主任及计算能力培养中心主任，兼任喀什地区电子信息产业技术研究院研究员。',
         '研究主线聚焦于<strong>生成过程中的上下文效应（Contextual Effects in Generation）</strong>，探索文本前后文、少样本示例、历史交互与结构关系如何影响模型的生成与判断，进而提升大语言模型（RAG、In-Context Learning、Agentic AI）、财经智能决策与时空轨迹学习在信息不足或干扰环境下的稳健性与可信度。',
         '近五年在 IEEE TKDE、ACM SIGKDD、AAAI、IJCAI、EMNLP、ICDE、ACM SIGSPATIAL、IEEE T-ITS、IEEE TBD、IEEE TCYB、ACM TIST、Neural Networks、Information Fusion 等顶级会议与期刊发表论文 30 余篇，获 KSEM 2023 唯一最佳论文奖与四川省计算机学会科学技术一等奖，授权发明专利 10 余项；同时持续维护 FoxReader、语见手语翻译等开源工程实践。',
       ],
       en: [
-        'Dr. Li Huang received her Ph.D. in Computer Science (successive M.S.–Ph.D. program) from the University of Electronic Science and Technology of China (UESTC) in June 2021. She is currently an Associate Professor, Chair of the Department of Artificial Intelligence, and Director of the Computational Competency Training Center at the School of Computing and Artificial Intelligence, Southwestern University of Finance and Economics (SWUFE), and a Researcher at the Kash Institute of Electronics and Information Industry.',
-        'Her research centers on <strong>Contextual Effects in Generation</strong>—investigating how surrounding text, demonstrations, historical trajectories, and relational graphs shape model outputs, introduce or mitigate bias, and govern decision reliability. This thread spans Natural Language Processing (RAG, In-Context Learning, Agentic AI), AI for Business & Financial Decision-Making, and Spatiotemporal Data Mining.',
-        'She has published over 30 peer-reviewed papers in leading venues including IEEE TKDE, ACM SIGKDD, AAAI, IJCAI, EMNLP, ICDE, ACM SIGSPATIAL, IEEE T-ITS, IEEE TBD, IEEE TCYB, ACM TIST, Neural Networks, and Information Fusion, holds 10+ invention patents, and received the Sole Best Paper Award at KSEM 2023. Alongside academic research, she builds and maintains open-source tools including FoxReader and the Yujian Sign Language Translation system.',
+        'Research centers on <strong>Contextual Effects in Generation</strong>—investigating how surrounding text, demonstrations, historical trajectories, and relational graphs shape model outputs, introduce or mitigate bias, and govern decision reliability. This thread spans Natural Language Processing (RAG, In-Context Learning, Agentic AI), AI for Business & Financial Decision-Making, and Spatiotemporal Data Mining.',
+        'Published over 30 peer-reviewed papers in leading venues including IEEE TKDE, ACM SIGKDD, AAAI, IJCAI, EMNLP, ICDE, ACM SIGSPATIAL, IEEE T-ITS, IEEE TBD, IEEE TCYB, ACM TIST, Neural Networks, and Information Fusion, with 10+ invention patents and the Sole Best Paper Award at KSEM 2023. Alongside academic research, builds and maintains open-source tools including FoxReader and the Yujian Sign Language Translation system.',
       ],
     },
     stats: [
@@ -118,8 +115,8 @@ window.SITE_DATA = {
     {
       date: '2025',
       tag: { zh: '成果', en: 'Milestone' },
-      zh: '论文发表于 <strong>ACM SIGKDD 2025</strong>（一作）、<strong>AAAI 2025</strong>（2 篇）、<strong>ACM SIGSPATIAL 2025</strong>（一作）、<strong>IEEE TKDE</strong>、<strong>ICDE 2025</strong>、<strong>IEEE TBD</strong>、<strong>KBS</strong> 与 <strong>Neural Networks</strong>；获评 <strong>2025 年西南财经大学“十佳”女教职工</strong>，获批四川省自然科学基金青年项目（主持）。',
-      en: 'Published at <strong>ACM SIGKDD 2025</strong>, <strong>AAAI 2025</strong> (×2), <strong>ACM SIGSPATIAL 2025</strong>, <strong>IEEE TKDE</strong>, <strong>ICDE 2025</strong>, <strong>IEEE TBD</strong>, <strong>KBS</strong>, and <strong>Neural Networks</strong>; honored as 2025 SWUFE Top-10 Female Faculty and awarded Sichuan NSF Youth Grant (PI).',
+      zh: '论文发表于 <strong>ACM SIGKDD 2025</strong>（一作）、<strong>AAAI 2025</strong>（2 篇）、<strong>ACM SIGSPATIAL 2025</strong>（一作）、<strong>IEEE TKDE</strong>、<strong>ICDE 2025</strong>、<strong>IEEE TBD</strong>、<strong>KBS</strong> 与 <strong>Neural Networks</strong>；获评 <strong>2025 年西南财经大学“十佳”女教职工</strong>。',
+      en: 'Published at <strong>ACM SIGKDD 2025</strong>, <strong>AAAI 2025</strong> (×2), <strong>ACM SIGSPATIAL 2025</strong>, <strong>IEEE TKDE</strong>, <strong>ICDE 2025</strong>, <strong>IEEE TBD</strong>, <strong>KBS</strong>, and <strong>Neural Networks</strong>; honored as 2025 SWUFE Top-10 Female Faculty.',
     },
     {
       date: '2024.12',
@@ -333,11 +330,11 @@ window.SITE_DATA = {
       id: 'sun2026scaledpp',
       year: 2026,
       title: 'Scaling DPPs for RAG: Density Meets Diversity',
-      authors: ['X. Sun', 'B. Xie', 'Li Huang', 'Qiang Gao'],
+      authors: ['X. Sun', 'B. Xie', 'Li Huang*', 'Qiang Gao'],
       venue: 'arXiv preprint arXiv:2604.03240, 2026',
       venueShort: 'arXiv 2026',
       tier: 'Preprint',
-      role: 'coauthor',
+      role: 'corresponding',
       topics: ['nlp', 'preprint'],
       selected: true,
       url: 'https://arxiv.org/abs/2604.03240',
@@ -352,11 +349,11 @@ window.SITE_DATA = {
       id: 'xu2026mrag',
       year: 2026,
       title: 'M-RAG: Making RAG Faster, Stronger, and More Efficient',
-      authors: ['S. Xu', 'T. Xu', 'B. Xie', 'Li Huang', 'Qiang Gao', 'Kunpeng Zhang'],
+      authors: ['S. Xu', 'T. Xu', 'B. Xie', 'Li Huang*', 'Qiang Gao', 'Kunpeng Zhang'],
       venue: 'arXiv preprint arXiv:2603.26667, 2026',
       venueShort: 'arXiv 2026',
       tier: 'Preprint',
-      role: 'coauthor',
+      role: 'corresponding',
       topics: ['nlp', 'preprint'],
       selected: true,
       url: 'https://arxiv.org/abs/2603.26667',
@@ -1082,69 +1079,6 @@ window.SITE_DATA = {
       },
     ],
   },
-
-  grants: [
-    {
-      period: '2025 – 2026',
-      role: { zh: '主持 (PI)', en: 'PI' },
-      code: '2025ZNSFSC1495',
-      title: {
-        zh: '四川省自然科学基金青年项目',
-        en: 'Natural Science Foundation of Sichuan Province (Youth Program)',
-      },
-      status: { zh: '在研', en: 'Ongoing' },
-    },
-    {
-      period: '2025 – 2026',
-      role: { zh: '主持 (PI)', en: 'PI' },
-      code: 'Industry',
-      title: {
-        zh: '北京智谱华章科技有限公司（智谱 AI）横向项目：智慧化粮情分析系统',
-        en: 'Zhipu AI Industry Collaboration: Intelligent Grain Analytics System',
-      },
-      status: { zh: '在研', en: 'Ongoing' },
-    },
-    {
-      period: '2024 – 2027',
-      role: { zh: '核心主研', en: 'Core Investigator' },
-      code: 'NSFC 62376228',
-      title: {
-        zh: '国家自然科学基金面上项目：基于脉冲编码的类脑联邦学习方法研究',
-        en: 'NSFC General Program: Brain-Inspired Federated Learning Based on Spike Coding',
-      },
-      status: { zh: '在研', en: 'Ongoing' },
-    },
-    {
-      period: '2023 – 2025',
-      role: { zh: '核心主研', en: 'Core Investigator' },
-      code: '2023-JB00-00016-GX',
-      title: {
-        zh: '成都市“揭榜挂帅”科技项目：面向科技金融的人工智能评价系统开发及应用示范',
-        en: 'Chengdu Science & Technology Program: AI Evaluation System for Sci-Tech Finance',
-      },
-      status: { zh: '项目完成/验收', en: 'Completed' },
-    },
-    {
-      period: '2023 – 2025',
-      role: { zh: '主研', en: 'Co-Investigator' },
-      code: '2023ZYD0145',
-      title: {
-        zh: '四川省科技厅中央引导地方自由探索项目：时空语义理解可解释机理研究',
-        en: 'Sichuan Science & Technology Program: Interpretable Mechanisms of Spatiotemporal Semantic Understanding',
-      },
-      status: { zh: '结题', en: 'Completed' },
-    },
-    {
-      period: '2022 – 2024',
-      role: { zh: '主持 (PI)', en: 'PI' },
-      code: 'SWUFE',
-      title: {
-        zh: '光华英才工程-青年教师成长计划 & 引进人才科研启动重点项目',
-        en: 'SWUFE Guanghua Talent Young Faculty Plan & Startup Key Research Grant',
-      },
-      status: { zh: '结题', en: 'Completed' },
-    },
-  ],
 
   timeline: [
     {

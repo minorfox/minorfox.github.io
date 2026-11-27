@@ -408,6 +408,10 @@ button {
   background: var(--bg);
 }
 
+.section-profile {
+  padding-top: 44px;
+}
+
 .section-title {
   text-align: center;
   margin-bottom: 42px;

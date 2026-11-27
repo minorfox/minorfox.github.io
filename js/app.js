@@ -47,12 +47,12 @@
       pubEmpty: '未找到匹配的论文，请清空筛选或更换关键词。',
       projHeading: '开源与工程实践',
       projSubtitle: '源自 GitHub @minorfox 的活跃开源项目与教学实践系统',
-      resumeHeading: '学术履历、教学与科研项目',
+      resumeHeading: '学术履历、教学与荣誉',
       resumePositions: '工作与教育经历',
       resumeTeaching: '教学与课程建设',
-      resumeGrants: '主要科研项目',
       resumeHonors: '荣誉与获奖',
-      serviceHeading: '学术服务与招生',
+      resumeService: '学术服务',
+      serviceHeading: '招生与科研合作',
       contactHeading: '联系方式',
       contactLocation: '办公地点',
       contactEmail: '电子邮箱',
@@ -103,9 +103,9 @@
       resumeHeading: 'Resume',
       resumePositions: 'Positions & Education',
       resumeTeaching: 'Teaching & Curriculum',
-      resumeGrants: 'Research Grants',
       resumeHonors: 'Honors & Awards',
-      serviceHeading: 'Service & Opening',
+      resumeService: 'Academic Service',
+      serviceHeading: 'Prospective Students',
       contactHeading: 'Contact',
       contactLocation: 'Location',
       contactEmail: 'Email',
@@ -247,12 +247,11 @@
     document.getElementById('typed-text').textContent = t(P.heroSubtitle);
   }
 
-  // 3. About & Facts (#about)
+  // 3. Profile & Facts (#about)
   function renderAbout() {
     const P = D.profile;
     const U = UI[lang];
 
-    document.getElementById('about-heading').textContent = U.aboutHeading;
     document.getElementById('about-name').textContent = U.aboutSubname;
 
     document.getElementById('about-meta').innerHTML = `
@@ -456,20 +455,19 @@
     `;
 
     const rightHtml = `
-      <h3 class="resume-title">${esc(U.resumeGrants)}</h3>
-      ${D.grants.map(g => `
-        <div class="resume-item">
-          <h4>${esc(t(g.title))}</h4>
-          <h5>${esc(g.period)} · ${esc(t(g.role))}</h5>
-          <p><em>${esc(g.code)} (${esc(t(g.status))})</em></p>
-        </div>
-      `).join('')}
-
       <h3 class="resume-title">${esc(U.resumeHonors)}</h3>
       ${D.honors.map(h => `
         <div class="resume-item">
           <h4>${esc(t(h))}</h4>
           <h5>${esc(h.year)}</h5>
+        </div>
+      `).join('')}
+
+      <h3 class="resume-title">${esc(U.resumeService)}</h3>
+      ${D.services.map(s => `
+        <div class="resume-item">
+          <h4>${esc(t(s.group))}</h4>
+          <p>${esc(t(s.items))}</p>
         </div>
       `).join('')}
     `;
@@ -478,27 +476,26 @@
     document.getElementById('resume-col-right').innerHTML = rightHtml;
   }
 
-  // 8. Service & Opening (#service)
+  // 8. Prospective Students / Opening (#service)
   function renderService() {
     const U = UI[lang];
     const R = D.recruitment;
     document.getElementById('service-heading').textContent = U.serviceHeading;
 
-    const itemsHtml = D.services.map(s => `
+    document.getElementById('service-list').innerHTML = `
       <div class="service-item">
-        <h4>${esc(t(s.group))}</h4>
-        <p>${esc(t(s.items))}</p>
+        <h4>${esc(t(R.tracks[0].title))}</h4>
+        <p>${esc(t(R.tracks[0].body))}</p>
       </div>
-    `).join('');
-
-    const recruitHtml = `
       <div class="service-item">
-        <h4>${esc(t(R.title))}</h4>
-        <p>${esc(t(R.intro))} ${esc(t(R.tracks[0].body))} ${esc(t(R.tracks[1].body))} ${esc(t(R.ctaNote))}</p>
+        <h4>${esc(t(R.tracks[1].title))}</h4>
+        <p>${esc(t(R.tracks[1].body))}</p>
+      </div>
+      <div class="service-item">
+        <h4>${esc(lang === 'zh' ? '申请与联系说明' : 'How to Reach Out')}</h4>
+        <p>${esc(t(R.intro))} ${esc(t(R.ctaNote))}</p>
       </div>
     `;
-
-    document.getElementById('service-list').innerHTML = itemsHtml + recruitHtml;
   }
 
   // 9. Contact & Footer
