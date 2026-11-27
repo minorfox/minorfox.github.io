@@ -1,4 +1,4 @@
-# Li Huang (黄鹂) · Personal Academic Homepage
+# Personal Academic Homepage
 
 静态零构建的个人学术与开源主页（面向 GitHub Pages：`https://minorfox.github.io`）。
 
