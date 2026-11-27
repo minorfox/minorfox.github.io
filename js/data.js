@@ -35,6 +35,7 @@ window.SITE_DATA = {
     scholarUrl: 'https://scholar.google.com/citations?user=vlDKPmIAAAAJ',
     githubUrl: 'https://github.com/minorfox',
     swufeUrl: 'https://it.swufe.edu.cn/info/1121/18358.htm',
+    echorialUrl: 'https://echorial.com',
     heroSubtitle: {
       zh: 'NLP · RAG · In-Context Learning · AI for Business',
       en: 'NLP · RAG · In-Context Learning · AI for Business',
@@ -78,11 +79,11 @@ window.SITE_DATA = {
     bio: {
       zh: [
         '研究主线聚焦于<strong>生成过程中的上下文效应（Contextual Effects in Generation）</strong>，探索文本前后文、少样本示例、历史交互与结构关系如何影响模型的生成与判断，进而提升大语言模型（RAG、In-Context Learning、Agentic AI）、财经智能决策与时空轨迹学习在信息不足或干扰环境下的稳健性与可信度。',
-        '近五年在 IEEE TKDE、ACM SIGKDD、AAAI、IJCAI、EMNLP、ICDE、ACM SIGSPATIAL、IEEE T-ITS、IEEE TBD、IEEE TCYB、ACM TIST、Neural Networks、Information Fusion 等顶级会议与期刊发表论文 30 余篇，获 KSEM 2023 唯一最佳论文奖与四川省计算机学会科学技术一等奖，授权发明专利 10 余项；同时持续维护 FoxReader、语见手语翻译等开源工程实践。',
+        '近五年在 IEEE TKDE、ACM SIGKDD、AAAI、IJCAI、EMNLP、ICDE、ACM SIGSPATIAL、IEEE T-ITS、IEEE TBD、IEEE TCYB、ACM TIST、Neural Networks、Information Fusion 等顶级会议与期刊发表论文 30 余篇，获 KSEM 2023 唯一最佳论文奖与四川省计算机学会科学技术一等奖，授权发明专利 10 余项；同时持续打造 <strong>艾可瑞亚（Echorial）</strong> 互动判断力训练平台，并维护 FoxReader、语见手语翻译等开源工程实践。',
       ],
       en: [
         'Research centers on <strong>Contextual Effects in Generation</strong>—investigating how surrounding text, demonstrations, historical trajectories, and relational graphs shape model outputs, introduce or mitigate bias, and govern decision reliability. This thread spans Natural Language Processing (RAG, In-Context Learning, Agentic AI), AI for Business & Financial Decision-Making, and Spatiotemporal Data Mining.',
-        'Published over 30 peer-reviewed papers in leading venues including IEEE TKDE, ACM SIGKDD, AAAI, IJCAI, EMNLP, ICDE, ACM SIGSPATIAL, IEEE T-ITS, IEEE TBD, IEEE TCYB, ACM TIST, Neural Networks, and Information Fusion, with 10+ invention patents and the Sole Best Paper Award at KSEM 2023. Alongside academic research, builds and maintains open-source tools including FoxReader and the Yujian Sign Language Translation system.',
+        'Published over 30 peer-reviewed papers in leading venues including IEEE TKDE, ACM SIGKDD, AAAI, IJCAI, EMNLP, ICDE, ACM SIGSPATIAL, IEEE T-ITS, IEEE TBD, IEEE TCYB, ACM TIST, Neural Networks, and Information Fusion, with 10+ invention patents and the Sole Best Paper Award at KSEM 2023. Alongside academic research, leads the <strong>Echorial</strong> interactive judgment training platform and maintains open-source tools including FoxReader and Yujian Sign Language Translation.',
       ],
     },
     stats: [
@@ -96,9 +97,9 @@ window.SITE_DATA = {
   news: [
     {
       date: '2026.11',
-      tag: { zh: '开源', en: 'Release' },
-      zh: '开源桌面端离线论文管理与批注工具 <strong>FoxReader</strong> 发布 v0.3.2，并开源无障碍手语翻译工程仓库 <strong>语见（Yujian）</strong>。',
-      en: 'Released <strong>FoxReader v0.3.2</strong> (pure-local PDF paper manager & reader) and open-sourced the <strong>Yujian</strong> Chinese Sign Language translation repository.',
+      tag: { zh: '平台', en: 'Launch' },
+      zh: '上线并持续迭代个人互动判断力训练平台 <strong><a href="https://echorial.com" target="_blank" rel="noopener noreferrer">艾可瑞亚（Echorial）</a></strong>（覆盖大学生反诈独立核验沙盘与电商数据 AI 幻觉纠偏工作台）；同步发布 <strong>FoxReader v0.3.2</strong> 并开源无障碍手语翻译仓库 <strong>语见（Yujian）</strong>。',
+      en: 'Launched and actively iterating on the <strong><a href="https://echorial.com" target="_blank" rel="noopener noreferrer">Echorial</a></strong> interactive judgment & AI-auditing training platform, alongside releasing <strong>FoxReader v0.3.2</strong> and open-sourcing the <strong>Yujian</strong> Chinese Sign Language translation repository.',
     },
     {
       date: '2026.06',
@@ -956,6 +957,30 @@ window.SITE_DATA = {
 
   projects: [
     {
+      id: 'echorial',
+      name: 'Echorial · 艾可瑞亚',
+      badge: { zh: '在线实践平台 · 通用版免登录开放 · echorial.com', en: 'Live Interactive Platform · Open Access · echorial.com' },
+      icon: 'assets/echorial-mark.svg',
+      tagline: {
+        zh: '面向个人的互动判断力与核验能力训练平台——在高压话术与复杂数据前，先查证、再行动',
+        en: 'Interactive judgment & verification training platform — verify first, act second under high-pressure persuasion and complex data',
+      },
+      description: {
+        zh: '面向高校教学与个人能力训练的高仿真沙盘平台，包含两大实战场：① 大学生反诈独立核验沙盘（冒充公检法、假实习招聘、机票退改签、刷单返佣、演唱会门票 5 个第一人称模拟手机与真人语音来电演练）；② 电商运营复盘与 AI 幻觉纠偏工作台（基于 7 张原始业务表与 1,089 行订单数据进行口径清洗与 AI 归因草稿逐句审校），内置“艾可（Echo）”循证伴学提示闭环。',
+        en: 'A high-simulation interactive sandbox platform featuring two practice arenas: (1) five campus anti-fraud crisis drills with first-person simulated phone UI, voice calls, and independent receipt verification; and (2) an e-commerce data workbench for cleaning 1,089 transaction rows across 7 raw tables and auditing unsupported AI-generated attribution drafts—powered by Echo’s evidence-guided coaching loop.',
+      },
+      stack: ['Node.js', 'Interactive Sandboxes', 'AI Draft Auditing', 'Evidence-Guided Coaching', 'SQLite Telemetry'],
+      highlights: {
+        zh: ['5 个反诈危机核验沙盘 + 真人语音来电仿真', '7 张业务表 / 1,089 行订单与 AI 幻觉纠偏工作台', '通用版免登录直接开练，支持教学评估与研究复盘'],
+        en: ['5 anti-fraud crisis sandboxes with voice-call simulation', 'E-commerce workbench with 1,089 rows & AI draft auditing', 'Open guest access with structured research telemetry'],
+      },
+      links: [
+        { label: { zh: '在线访问 · echorial.com', en: 'Live Site · echorial.com' }, url: 'https://echorial.com' },
+        { label: { zh: '反诈核验沙盘', en: 'Anti-Fraud Sandboxes' }, url: 'https://echorial.com/training/fraud/students.html' },
+        { label: { zh: '电商 AI 审校工作台', en: 'E-Commerce Workbench' }, url: 'https://echorial.com/go/trade' },
+      ],
+    },
+    {
       id: 'foxreader',
       name: 'FoxReader',
       badge: { zh: '开源桌面应用 · v0.3.2 · MIT', en: 'Open-Source Desktop · v0.3.2 · MIT' },
@@ -998,28 +1023,6 @@ window.SITE_DATA = {
       },
       links: [
         { label: { zh: 'GitHub 仓库', en: 'GitHub Repo' }, url: 'https://github.com/minorfox/yujian-sign-translation' },
-      ],
-    },
-    {
-      id: 'echorial',
-      name: 'Echorial · 艾可瑞亚',
-      badge: { zh: '线上实践平台 · 持续演进', en: 'Live Platform · Active' },
-      monogram: 'E',
-      tagline: {
-        zh: '面向高校与企业学习的情境化交互训练平台',
-        en: 'Interactive scenario-based learning & decision training platform',
-      },
-      description: {
-        zh: '聚焦真实决策情境的交互式教学与训练系统，覆盖大学生反诈多场景演练（机票退改、返利刷单、实习陷阱、票务与冒充核验）及电商运营实训，支持全过程行为复盘与教学评估。',
-        en: 'An interactive scenario-training environment designed for practical decision making, featuring campus anti-fraud simulations and e-commerce operations drills with structured post-session telemetry and review.',
-      },
-      stack: ['Node.js', 'Web App', 'Scenario Simulation', 'Telemetry'],
-      highlights: {
-        zh: ['多分支交互式情境推演', '高校反诈与电商运营实训场景', '独立线上站点运行'],
-        en: ['Multi-branch interactive drills', 'Campus anti-fraud & e-commerce modules', 'Live web deployment'],
-      },
-      links: [
-        { label: { zh: '访问平台', en: 'Visit Site' }, url: 'https://echorial.com' },
       ],
     },
     {

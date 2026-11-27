@@ -23,6 +23,7 @@
     pin: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>',
     sparkles: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>',
     globe: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>',
+    pulse: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>',
   };
 
   const UI = {
@@ -37,6 +38,10 @@
       metaGitHub: 'GitHub',
       metaOfficial: '西财主页',
       metaOfficialLink: '计算机与人工智能学院',
+      metaPlatform: '实践平台',
+      metaPlatformLink: '艾可瑞亚 Echorial (echorial.com)',
+      metaOpenSource: '开源工具',
+      switchLangBtn: 'English',
       newsHeading: '近期动态',
       showMore: '展开全部动态',
       showLess: '收起',
@@ -45,8 +50,8 @@
       pubSearchPlaceholder: '搜索标题、期刊/会议、年份或合作者…',
       pubLegend: '* 表示通讯作者；加粗标出本人姓名',
       pubEmpty: '未找到匹配的论文，请清空筛选或更换关键词。',
-      projHeading: '开源与工程实践',
-      projSubtitle: '源自 GitHub @minorfox 的活跃开源项目与教学实践系统',
+      projHeading: '平台与开源实践',
+      projSubtitle: '在线互动判断力训练平台 Echorial（echorial.com）与 GitHub @minorfox 开源系统',
       resumeHeading: '学术履历、教学与荣誉',
       resumePositions: '工作与教育经历',
       resumeTeaching: '教学与课程建设',
@@ -90,6 +95,10 @@
       metaGitHub: 'GitHub',
       metaOfficial: 'SWUFE',
       metaOfficialLink: 'Official Faculty Page',
+      metaPlatform: 'Platform',
+      metaPlatformLink: 'Echorial (echorial.com)',
+      metaOpenSource: 'Open Source',
+      switchLangBtn: '中文',
       newsHeading: 'News',
       showMore: 'Show More',
       showLess: 'Show Less',
@@ -98,8 +107,8 @@
       pubSearchPlaceholder: 'Search title, venue, year, or co-author…',
       pubLegend: '* Corresponding Author; my name is highlighted in bold',
       pubEmpty: 'No matching publications found.',
-      projHeading: 'Open Source & Systems',
-      projSubtitle: 'Active engineering builds from GitHub @minorfox — local-first tools & Tech-for-Good',
+      projHeading: 'Platforms & Open Source',
+      projSubtitle: 'Interactive judgment training platform Echorial (echorial.com) and open-source tools on GitHub @minorfox',
       resumeHeading: 'Resume',
       resumePositions: 'Positions & Education',
       resumeTeaching: 'Teaching & Curriculum',
@@ -226,7 +235,7 @@
       : `${esc(P.nameEn)}<span class="home-name-sub">${esc(P.nameZh)}</span>`;
 
     document.getElementById('home-socials').innerHTML = `
-      <button type="button" id="hero-copy-email" title="${esc(P.email)}" aria-label="Copy Email">
+      <button type="button" class="social-icon-btn" id="hero-copy-email" title="${esc(P.email)}" aria-label="Copy Email">
         <span style="width:22px;height:22px;display:inline-flex">${ICONS.mail}</span>
       </button>
       <a href="${esc(P.scholarUrl)}" target="_blank" rel="noopener noreferrer" title="Google Scholar" aria-label="Google Scholar">
@@ -235,13 +244,24 @@
       <a href="${esc(P.githubUrl)}" target="_blank" rel="noopener noreferrer" title="GitHub @minorfox" aria-label="GitHub">
         <span style="width:22px;height:22px;display:inline-flex">${ICONS.github}</span>
       </a>
+      <a href="${esc(P.echorialUrl)}" target="_blank" rel="noopener noreferrer" title="Echorial · 艾可瑞亚 (echorial.com)" aria-label="Echorial">
+        <span style="width:22px;height:22px;display:inline-flex">${ICONS.pulse}</span>
+      </a>
       <a href="${esc(P.swufeUrl)}" target="_blank" rel="noopener noreferrer" title="${esc(U.metaOfficialLink)}" aria-label="SWUFE Official Page">
         <span style="width:22px;height:22px;display:inline-flex">${ICONS.university}</span>
       </a>
+      <span class="social-divider" aria-hidden="true"></span>
+      <button type="button" class="hero-lang-switch" id="hero-lang-toggle" aria-label="Switch language">
+        <span style="width:14px;height:14px;display:inline-flex">${ICONS.globe}</span>
+        <span>${esc(U.switchLangBtn)}</span>
+      </button>
     `;
 
     document.getElementById('hero-copy-email').addEventListener('click', () => {
       copyText(P.email, U.emailCopied);
+    });
+    document.getElementById('hero-lang-toggle').addEventListener('click', () => {
+      switchLanguage(lang === 'zh' ? 'en' : 'zh');
     });
 
     document.getElementById('typed-text').textContent = t(P.heroSubtitle);
@@ -261,6 +281,8 @@
       <div class="meta-item"><span class="meta-chevron">›</span><span class="meta-label">${esc(U.metaGitHub)}:</span><span class="meta-val"><a href="${esc(P.githubUrl)}" target="_blank" rel="noopener noreferrer">@minorfox</a></span></div>
       <div class="meta-item"><span class="meta-chevron">›</span><span class="meta-label">${esc(U.metaCity)}:</span><span class="meta-val">${esc(t(P.city))}</span></div>
       <div class="meta-item"><span class="meta-chevron">›</span><span class="meta-label">${esc(U.metaOfficial)}:</span><span class="meta-val"><a href="${esc(P.swufeUrl)}" target="_blank" rel="noopener noreferrer">${esc(U.metaOfficialLink)}</a></span></div>
+      <div class="meta-item"><span class="meta-chevron">›</span><span class="meta-label">${esc(U.metaPlatform)}:</span><span class="meta-val"><a href="${esc(P.echorialUrl)}" target="_blank" rel="noopener noreferrer">${esc(U.metaPlatformLink)}</a></span></div>
+      <div class="meta-item"><span class="meta-chevron">›</span><span class="meta-label">${esc(U.metaOpenSource)}:</span><span class="meta-val"><a href="https://github.com/minorfox/FoxReader" target="_blank" rel="noopener noreferrer">FoxReader</a> · <a href="https://github.com/minorfox/yujian-sign-translation" target="_blank" rel="noopener noreferrer">${lang === 'zh' ? '语见' : 'Yujian'}</a></span></div>
     `;
 
     document.getElementById('about-copy-email').addEventListener('click', () => {
@@ -526,6 +548,7 @@
           <p>
             <a href="${esc(P.scholarUrl)}" target="_blank" rel="noopener noreferrer">Google Scholar</a> ·
             <a href="${esc(P.githubUrl)}" target="_blank" rel="noopener noreferrer">GitHub</a> ·
+            <a href="${esc(P.echorialUrl)}" target="_blank" rel="noopener noreferrer">Echorial</a> ·
             <a href="${esc(P.swufeUrl)}" target="_blank" rel="noopener noreferrer">SWUFE</a>
           </p>
         </div>
@@ -542,6 +565,7 @@
       <a href="mailto:${esc(P.email)}" title="Email" aria-label="Email"><span style="width:17px;height:17px;display:inline-flex">${ICONS.mail}</span></a>
       <a href="${esc(P.scholarUrl)}" target="_blank" rel="noopener noreferrer" title="Google Scholar" aria-label="Google Scholar"><span style="width:17px;height:17px;display:inline-flex">${ICONS.scholar}</span></a>
       <a href="${esc(P.githubUrl)}" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub"><span style="width:17px;height:17px;display:inline-flex">${ICONS.github}</span></a>
+      <a href="${esc(P.echorialUrl)}" target="_blank" rel="noopener noreferrer" title="Echorial (echorial.com)" aria-label="Echorial"><span style="width:17px;height:17px;display:inline-flex">${ICONS.pulse}</span></a>
       <a href="${esc(P.swufeUrl)}" target="_blank" rel="noopener noreferrer" title="SWUFE" aria-label="SWUFE"><span style="width:17px;height:17px;display:inline-flex">${ICONS.university}</span></a>
     `;
     document.getElementById('footer-copy').textContent =
@@ -602,14 +626,23 @@
     onScroll();
   }
 
+  function switchLanguage(next) {
+    if (next !== 'zh' && next !== 'en') return;
+    if (next === lang) return;
+    lang = next;
+    safeSet('lh_lang', lang);
+    try {
+      const url = new URL(window.location.href);
+      url.searchParams.set('lang', lang);
+      window.history.replaceState(null, '', url.toString());
+    } catch (_) {}
+    renderAll();
+  }
+
   function initEvents() {
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.addEventListener('click', () => {
-        const next = btn.dataset.lang;
-        if (next === lang) return;
-        lang = next;
-        safeSet('lh_lang', lang);
-        renderAll();
+        switchLanguage(btn.dataset.lang);
       });
     });
 
