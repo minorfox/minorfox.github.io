@@ -22,7 +22,7 @@ window.SITE_DATA = {
     { id: 'news', icon: 'news', zh: '动态', en: 'News' },
     { id: 'publications', icon: 'book', zh: '论文', en: 'Publications' },
     { id: 'projects', icon: 'code', zh: '项目', en: 'Projects' },
-    { id: 'resume', icon: 'file', zh: '履历', en: 'Resume' },
+    { id: 'resume', icon: 'file', zh: '教学', en: 'Teaching' },
     { id: 'service', icon: 'award', zh: '招生', en: 'Opening' },
     { id: 'contact', icon: 'mail', zh: '联系', en: 'Contact' },
   ],
@@ -1075,29 +1075,6 @@ window.SITE_DATA = {
       },
     ],
   },
-
-  timeline: [
-    {
-      period: '2024.12 – Present',
-      title: { zh: '副教授 · 人工智能系主任 · 计算能力培养中心主任', en: 'Associate Professor · Dept. Chair of AI' },
-      org: { zh: '西南财经大学 计算机与人工智能学院', en: 'School of Computing and Artificial Intelligence, SWUFE' },
-    },
-    {
-      period: '2022.09 – Present',
-      title: { zh: '研究员', en: 'Researcher' },
-      org: { zh: '喀什地区电子信息产业技术研究院（金融科技与智慧应用研究所）', en: 'Kash Institute of Electronics and Information Industry' },
-    },
-    {
-      period: '2021.12 – 2024.12',
-      title: { zh: '讲师', en: 'Lecturer' },
-      org: { zh: '西南财经大学 计算机与人工智能学院', en: 'School of Computing and Artificial Intelligence, SWUFE' },
-    },
-    {
-      period: '2014.09 – 2021.06',
-      title: { zh: '工学博士（计算机软件与理论，硕博连读）', en: 'Ph.D. in Computer Science (Successive M.S.–Ph.D.)' },
-      org: { zh: '电子科技大学（UESTC）计算机科学与工程学院', en: 'University of Electronic Science and Technology of China (UESTC)' },
-    },
-  ],
 
   honors: [
     { year: '2026', zh: '中国大学生计算机设计大赛四川省级赛二等奖（指导教师，“语见”手语系统）', en: 'Faculty Advisor, 2nd Prize, Sichuan Collegiate Computer Design Competition (Yujian)' },

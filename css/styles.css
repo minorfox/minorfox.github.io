@@ -1072,7 +1072,21 @@ button {
 .resume-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px 44px;
+}
+
+.resume-col-full {
+  grid-column: 1 / -1;
+}
+
+.resume-service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px 44px;
+}
+
+.resume-service-grid .resume-item {
+  padding-bottom: 0;
 }
 
 .resume-title {
@@ -1082,7 +1096,8 @@ button {
   margin: 22px 0 18px;
 }
 
-.resume-col .resume-title:first-child {
+.resume-col .resume-title:first-child,
+.resume-col-full .resume-title:first-child {
   margin-top: 0;
 }
 
@@ -1447,6 +1462,7 @@ button {
   .projects-grid,
   .project-item-wide,
   .resume-grid,
+  .resume-service-grid,
   .contact-grid {
     grid-template-columns: 1fr;
   }

@@ -56,8 +56,7 @@
       projMoreTitle: '更多论文开源代码',
       projMoreDesc: '已发表论文的实验与复现代码正按时间顺序陆续迁入 GitHub，单篇入口亦见<a href="#publications">学术论文</a>栏的 <code>[Code]</code> 链接。',
       projMoreBtn: 'Learn more →',
-      resumeHeading: '学术履历、教学与荣誉',
-      resumePositions: '工作与教育经历',
+      resumeHeading: '教学、荣誉与学术服务',
       resumeTeaching: '教学与课程建设',
       resumeHonors: '荣誉与获奖',
       resumeService: '学术服务',
@@ -117,8 +116,7 @@
       projMoreTitle: 'Paper Code Repositories',
       projMoreDesc: 'Official implementations for published papers are being consolidated on GitHub in chronological order, and linked via <code>[Code]</code> under <a href="#publications">Publications</a>.',
       projMoreBtn: 'Learn more →',
-      resumeHeading: 'Resume',
-      resumePositions: 'Positions & Education',
+      resumeHeading: 'Teaching, Honors & Service',
       resumeTeaching: 'Teaching & Curriculum',
       resumeHonors: 'Honors & Awards',
       resumeService: 'Academic Service',
@@ -515,21 +513,12 @@
       moreBar;
   }
 
-  // 7. Resume 2-Column Timeline (#resume)
+  // 7. Teaching, Honors & Academic Service (#resume)
   function renderResume() {
     const U = UI[lang];
     document.getElementById('resume-heading').textContent = U.resumeHeading;
 
     const leftHtml = `
-      <h3 class="resume-title">${esc(U.resumePositions)}</h3>
-      ${D.timeline.map(item => `
-        <div class="resume-item">
-          <h4>${esc(t(item.title))}</h4>
-          <h5>${esc(item.period)}</h5>
-          <p><em>${esc(t(item.org))}</em></p>
-        </div>
-      `).join('')}
-
       <h3 class="resume-title">${esc(U.resumeTeaching)}</h3>
       <div class="resume-item">
         <h4>${esc(lang === 'zh' ? '四川省人工智能高阶课程 · 省线下一流课程' : 'Provincial Advanced & First-Class AI Course')}</h4>
@@ -552,18 +541,23 @@
           <h5>${esc(h.year)}</h5>
         </div>
       `).join('')}
+    `;
 
+    const serviceHtml = `
       <h3 class="resume-title">${esc(U.resumeService)}</h3>
-      ${D.services.map(s => `
-        <div class="resume-item">
-          <h4>${esc(t(s.group))}</h4>
-          <p>${esc(t(s.items))}</p>
-        </div>
-      `).join('')}
+      <div class="resume-service-grid">
+        ${D.services.map(s => `
+          <div class="resume-item">
+            <h4>${esc(t(s.group))}</h4>
+            <p>${esc(t(s.items))}</p>
+          </div>
+        `).join('')}
+      </div>
     `;
 
     document.getElementById('resume-col-left').innerHTML = leftHtml;
     document.getElementById('resume-col-right').innerHTML = rightHtml;
+    document.getElementById('resume-service-row').innerHTML = serviceHtml;
   }
 
   // 8. Prospective Students / Opening (#service)
