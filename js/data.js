@@ -21,7 +21,7 @@ window.SITE_DATA = {
     { id: 'home', icon: 'home', zh: '首页', en: 'Home' },
     { id: 'news', icon: 'news', zh: '动态', en: 'News' },
     { id: 'publications', icon: 'book', zh: '论文', en: 'Publications' },
-    { id: 'projects', icon: 'code', zh: '开源', en: 'Open Source' },
+    { id: 'projects', icon: 'code', zh: '项目', en: 'Projects' },
     { id: 'resume', icon: 'file', zh: '履历', en: 'Resume' },
     { id: 'service', icon: 'award', zh: '招生', en: 'Opening' },
     { id: 'contact', icon: 'mail', zh: '联系', en: 'Contact' },
@@ -97,9 +97,15 @@ window.SITE_DATA = {
   news: [
     {
       date: '2026.11',
-      tag: { zh: '项目', en: 'Release' },
-      zh: '持续迭代个人维护项目 <strong><a href="https://echorial.com" target="_blank" rel="noopener noreferrer">艾可瑞亚（Echorial）</a></strong>（覆盖大学生反诈独立核验沙盘与电商数据 AI 幻觉纠偏工作台），并发布桌面端离线论文工具 <strong>FoxReader v0.3.2</strong>。',
-      en: 'Actively iterating on personal project <strong><a href="https://echorial.com" target="_blank" rel="noopener noreferrer">Echorial</a></strong> (campus anti-fraud verification sandboxes & e-commerce AI-auditing workbench), and released <strong>FoxReader v0.3.2</strong>.',
+      tag: { zh: '工具', en: 'Release' },
+      zh: '发布纯本地离线桌面论文管理工具 <strong><a href="https://github.com/minorfox/FoxReader" target="_blank" rel="noopener noreferrer">FoxReader v0.3.2</a></strong>（支持双栏学术排版清洗、公式/图表区域截图与 SQLite FTS5 全文检索）。',
+      en: 'Released <strong><a href="https://github.com/minorfox/FoxReader" target="_blank" rel="noopener noreferrer">FoxReader v0.3.2</a></strong>, a pure-local offline-first desktop PDF paper manager & reader with double-column cleanup, formula snapshots, and SQLite FTS5 search.',
+    },
+    {
+      date: '2026.10',
+      tag: { zh: '项目', en: 'Launch' },
+      zh: '正式上线个人维护项目 <strong><a href="https://echorial.com" target="_blank" rel="noopener noreferrer">艾可瑞亚（Echorial）</a></strong>，提供大学生反诈独立核验沙盘与电商数据 AI 幻觉纠偏工作台，支持免登录直接体验。',
+      en: 'Launched personal project <strong><a href="https://echorial.com" target="_blank" rel="noopener noreferrer">Echorial</a></strong> (echorial.com), featuring campus anti-fraud verification sandboxes and an e-commerce AI-auditing workbench with open guest access.',
     },
     {
       date: '2026.08',
@@ -964,8 +970,9 @@ window.SITE_DATA = {
   projects: [
     {
       id: 'echorial',
+      category: 'project',
       name: 'Echorial · 艾可瑞亚',
-      badge: { zh: '个人维护项目 · 免登录体验 · echorial.com', en: 'Maintained Project · Open Access · echorial.com' },
+      badge: { zh: '2026.10 上线 · 免登录体验 · echorial.com', en: 'Launched Oct 2026 · Open Access · echorial.com' },
       icon: 'assets/echorial-mark.svg',
       tagline: {
         zh: '面向个人的互动判断力与核验能力训练项目——在高压话术与复杂数据前，先查证、再行动',
@@ -988,6 +995,7 @@ window.SITE_DATA = {
     },
     {
       id: 'yujian',
+      category: 'project',
       name: '语见 · Yujian',
       badge: { zh: '2026.08 开源 · 省赛二等奖 · MIT', en: 'Open-Sourced Aug 2026 · 2nd Prize · MIT' },
       monogram: '语',
@@ -1010,6 +1018,7 @@ window.SITE_DATA = {
     },
     {
       id: 'foxreader',
+      category: 'tool',
       name: 'FoxReader',
       badge: { zh: '开源桌面工具 · v0.3.2 · MIT', en: 'Open-Source Tool · v0.3.2 · MIT' },
       icon: 'assets/foxreader-icon.png',
@@ -1023,34 +1032,12 @@ window.SITE_DATA = {
       },
       stack: ['Electron', 'React', 'TypeScript', 'Tailwind CSS', 'pdfjs-dist', 'SQLite FTS5'],
       highlights: {
-        zh: ['Windows & macOS 自动打包发布', '双栏清洗 + Alt 拖拽公式截图', 'arXiv / OpenAlex / Crossref 元数据补全'],
-        en: ['Cross-platform Windows & macOS releases', 'Double-column cleanup & formula snapshots', 'arXiv / OpenAlex / Crossref BibTeX lookup'],
+        zh: ['Windows & macOS 自动打包发布', '双栏学术排版选区清洗 + Alt 拖拽公式/图表截图', 'arXiv / OpenAlex / Crossref BibTeX 元数据补全'],
+        en: ['Cross-platform Windows & macOS releases', 'Double-column selection cleanup & formula/figure snapshots', 'arXiv / OpenAlex / Crossref BibTeX metadata lookup'],
       },
       links: [
         { label: { zh: 'GitHub 仓库', en: 'GitHub Repo' }, url: 'https://github.com/minorfox/FoxReader' },
         { label: { zh: '下载安装包', en: 'Releases' }, url: 'https://github.com/minorfox/FoxReader/releases' },
-      ],
-    },
-    {
-      id: 'context-abs',
-      name: 'Context-Aware ABS',
-      badge: { zh: '学术开源代码 · IEEE TCYB', en: 'Research Code · IEEE TCYB' },
-      monogram: 'Σ',
-      tagline: {
-        zh: '面向生成式文本摘要的自感知上下文选择机制实现',
-        en: 'Research implementation for self-aware context selecting abstractive summarization',
-      },
-      description: {
-        zh: '对应 IEEE Transactions on Cybernetics 论文的公开代码实现，探索解码生成阶段对源文本上下文语义的动态门控与自适应筛选机制。',
-        en: 'Public research implementation accompanying our IEEE Transactions on Cybernetics work on dynamic gating and self-aware context selection in abstractive summarization.',
-      },
-      stack: ['Python', 'Deep Learning', 'NLP', 'Summarization'],
-      highlights: {
-        zh: ['生成过程上下文筛选早期代表工作', '公开实验代码'],
-        en: ['Foundational work on contextual selection', 'Open research codebase'],
-      },
-      links: [
-        { label: { zh: 'GitHub 仓库', en: 'GitHub Repo' }, url: 'https://github.com/minorfox/context-aware-ABS' },
       ],
     },
   ],

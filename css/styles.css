@@ -898,12 +898,31 @@ button {
 }
 
 /* ==========================================================================
-   5. Open Source & Systems (Clean Left-Accent Editorial 2-Col Grid)
+   5. Projects & Open-Source Tools (Grouped Editorial 2+1 Layout)
    ========================================================================== */
+.projects-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.project-group-title {
+  margin: 0 0 20px;
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--heading);
+  letter-spacing: 0.01em;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 32px 42px;
+}
+
+.projects-grid-single {
+  grid-template-columns: 1fr;
 }
 
 .project-item {
@@ -922,6 +941,33 @@ button {
   border-radius: 50%;
   background: #ffffff;
   border: 2px solid var(--accent);
+}
+
+.project-item-wide {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(240px, 0.9fr);
+  gap: 16px 42px;
+  align-items: start;
+}
+
+.project-wide-highlights {
+  margin: 4px 0 0;
+  padding: 14px 18px;
+  list-style: none;
+  background: var(--bg-light);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.project-wide-highlights li {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--text);
 }
 
 .project-head {
@@ -978,6 +1024,46 @@ button {
   gap: 14px;
   font-size: 13.5px;
   font-weight: 500;
+}
+
+.projects-more-bar {
+  margin-top: 2px;
+  padding-top: 22px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px 28px;
+}
+
+.projects-more-info {
+  flex: 1 1 420px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.projects-more-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--heading);
+  margin-right: 10px;
+}
+
+.projects-more-desc code {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--accent);
+}
+
+.btn-sm {
+  padding: 6px 16px;
+  font-size: 13.5px;
+}
+
+.projects-more-btn {
+  flex-shrink: 0;
 }
 
 /* ==========================================================================
@@ -1359,6 +1445,7 @@ button {
 
   .about-meta-grid,
   .projects-grid,
+  .project-item-wide,
   .resume-grid,
   .contact-grid {
     grid-template-columns: 1fr;

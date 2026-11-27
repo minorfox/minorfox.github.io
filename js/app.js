@@ -50,7 +50,12 @@
       pubLegend: '* 表示通讯作者；加粗标出本人姓名',
       pubEmpty: '未找到匹配的论文，请清空筛选或更换关键词。',
       projHeading: '维护项目与开源工具',
-      projSubtitle: '持续维护的 Echorial、语见（Yujian）项目与开源工具 FoxReader',
+      projSubtitle: '聚焦持续维护的应用项目与开源科研工具；多篇论文开源代码亦陆续汇入 GitHub 仓库',
+      projGroupMaintained: '维护项目',
+      projGroupTools: '开源工具',
+      projMoreTitle: '更多论文开源代码',
+      projMoreDesc: '已发表论文的实验与复现代码正按时间顺序陆续迁入 GitHub，单篇入口亦见<a href="#publications">学术论文</a>栏的 <code>[Code]</code> 链接。',
+      projMoreBtn: 'Learn more →',
       resumeHeading: '学术履历、教学与荣誉',
       resumePositions: '工作与教育经历',
       resumeTeaching: '教学与课程建设',
@@ -106,7 +111,12 @@
       pubLegend: '* Corresponding Author; my name is highlighted in bold',
       pubEmpty: 'No matching publications found.',
       projHeading: 'Projects & Open-Source Tools',
-      projSubtitle: 'Actively maintained projects Echorial & Yujian, alongside the open-source tool FoxReader',
+      projSubtitle: 'Actively maintained applications and open-source research tools; paper implementations are consolidated on GitHub',
+      projGroupMaintained: 'Maintained Projects',
+      projGroupTools: 'Open-Source Tools',
+      projMoreTitle: 'Paper Code Repositories',
+      projMoreDesc: 'Official implementations for published papers are being consolidated on GitHub in chronological order, and linked via <code>[Code]</code> under <a href="#publications">Publications</a>.',
+      projMoreBtn: 'Learn more →',
       resumeHeading: 'Resume',
       resumePositions: 'Positions & Education',
       resumeTeaching: 'Teaching & Curriculum',
@@ -421,28 +431,88 @@
     });
   }
 
-  // 6. Open Source (#projects)
+  // 6. Projects & Open-Source Tools (#projects)
+  function renderProjectCard(p, wide) {
+    const highlights = t(p.highlights) || [];
+    const headerHtml = `
+      <div class="project-head">
+        ${p.icon ? `<img class="project-icon-sm" src="${esc(p.icon)}" alt="" />` : ''}
+        <h4 class="project-name">${esc(p.name)}</h4>
+      </div>
+      <span class="project-meta">${esc(t(p.badge))}</span>
+    `;
+    const linksHtml = `
+      <div class="project-links">
+        ${p.links.map(l => `<a href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">[${esc(t(l.label))}]</a>`).join('')}
+      </div>
+    `;
+
+    if (wide) {
+      return `
+        <article class="project-item project-item-wide">
+          <div class="project-wide-main">
+            ${headerHtml}
+            <p class="project-desc">${esc(t(p.description))}</p>
+            <p class="project-stack">${esc(p.stack.join(' · '))}</p>
+            ${linksHtml}
+          </div>
+          ${highlights.length ? `
+            <ul class="project-wide-highlights">
+              ${highlights.map(h => `<li><span class="meta-chevron" aria-hidden="true">›</span><span>${esc(h)}</span></li>`).join('')}
+            </ul>
+          ` : ''}
+        </article>
+      `;
+    }
+
+    return `
+      <article class="project-item">
+        ${headerHtml}
+        <p class="project-desc">${esc(t(p.description))}</p>
+        <p class="project-stack">${esc(p.stack.join(' · '))}</p>
+        ${linksHtml}
+      </article>
+    `;
+  }
+
   function renderProjects() {
     const U = UI[lang];
     document.getElementById('proj-heading').textContent = U.projHeading;
     document.getElementById('proj-subtitle').textContent = U.projSubtitle;
 
-    document.getElementById('projects-grid').innerHTML = D.projects
-      .map(p => `
-        <article class="project-item">
-          <div class="project-head">
-            ${p.icon ? `<img class="project-icon-sm" src="${esc(p.icon)}" alt="" />` : ''}
-            <h3 class="project-name">${esc(p.name)}</h3>
+    const maintained = D.projects.filter(p => p.category !== 'tool');
+    const tools = D.projects.filter(p => p.category === 'tool');
+
+    const renderGroup = (title, items) => {
+      if (!items.length) return '';
+      const isSingle = items.length === 1;
+      return `
+        <div class="project-group">
+          <h3 class="project-group-title">${esc(title)}</h3>
+          <div class="${isSingle ? 'projects-grid projects-grid-single' : 'projects-grid'}">
+            ${items.map(p => renderProjectCard(p, isSingle)).join('')}
           </div>
-          <span class="project-meta">${esc(t(p.badge))}</span>
-          <p class="project-desc">${esc(t(p.description))}</p>
-          <p class="project-stack">${esc(p.stack.join(' · '))}</p>
-          <div class="project-links">
-            ${p.links.map(l => `<a href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">[${esc(t(l.label))}]</a>`).join('')}
-          </div>
-        </article>
-      `)
-      .join('');
+        </div>
+      `;
+    };
+
+    const moreBar = `
+      <div class="projects-more-bar">
+        <div class="projects-more-info">
+          <span class="projects-more-title">${esc(U.projMoreTitle)}</span>
+          <span class="projects-more-desc">${U.projMoreDesc}</span>
+        </div>
+        <a class="btn-outline btn-sm projects-more-btn" href="${esc(D.profile.githubUrl)}?tab=repositories" target="_blank" rel="noopener noreferrer">
+          <span style="width:15px;height:15px;display:inline-flex" aria-hidden="true">${ICONS.github}</span>
+          <span>${esc(U.projMoreBtn)}</span>
+        </a>
+      </div>
+    `;
+
+    document.getElementById('projects-grid').innerHTML =
+      renderGroup(U.projGroupMaintained, maintained) +
+      renderGroup(U.projGroupTools, tools) +
+      moreBar;
   }
 
   // 7. Resume 2-Column Timeline (#resume)
