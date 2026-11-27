@@ -13,7 +13,7 @@ window.SITE_DATA = {
     },
     description: {
       zh: '黄鹂，西南财经大学计算机与人工智能学院副教授、人工智能系主任、计算能力培养中心主任。研究方向为生成过程中的上下文效应、NLP/RAG/ICL、AI for Business 与时空数据挖掘。',
-      en: 'Dr. Li Huang, Associate Professor and Chair of the Department of Artificial Intelligence at Southwestern University of Finance and Economics (SWUFE). Research in Contextual Effects in Generation, NLP/RAG/ICL, AI for Business, and Spatiotemporal Intelligence.',
+      en: 'Dr. Li Huang, Associate Professor and Chair of the Department of Artificial Intelligence at Southwestern University of Finance and Economics (SWUFE). Research in Contextual Effects in Generation, NLP/RAG/ICL, AI for Business, and Spatiotemporal Data Mining.',
     },
   },
 
@@ -37,7 +37,7 @@ window.SITE_DATA = {
     githubUrl: 'https://github.com/minorfox',
     swufeUrl: 'https://it.swufe.edu.cn/info/1121/18358.htm',
     typedItems: {
-      zh: ['西南财经大学副教授 · 人工智能系主任', 'NLP / RAG / AI for Business 研究者', '空间智能与社会计算（GeoSoc）课题组', '开源软件与科技向善实践者'],
+      zh: ['西南财经大学副教授 · 人工智能系主任', 'NLP / RAG / AI for Business 研究者', '开源软件与科技向善实践者'],
       en: ['Associate Professor at SWUFE', 'Chair, Dept. of Artificial Intelligence', 'NLP, RAG & AI for Business Researcher', 'Open-Source & Tech-for-Good Builder'],
     },
     motto: {
@@ -55,12 +55,12 @@ window.SITE_DATA = {
     roles: {
       zh: [
         '西南财经大学 计算机与人工智能学院 副教授、人工智能系主任、计算能力培养中心主任',
-        '智能金融教育部工程研究中心 · 新财经综合实验室 · 空间智能与社会计算（GeoSoc）课题组',
+        '智能金融教育部工程研究中心 · 新财经综合实验室',
         '喀什地区电子信息产业技术研究院 研究员',
       ],
       en: [
         'Associate Professor, Chair of the Dept. of Artificial Intelligence & Director of the Computational Competency Training Center, School of Computing and Artificial Intelligence, Southwestern University of Finance and Economics (SWUFE)',
-        'Engineering Research Center of Intelligent Finance (MOE) · Complex Laboratory of New Finance and Economics · GeoSoc Research Group',
+        'Engineering Research Center of Intelligent Finance (MOE) · Complex Laboratory of New Finance and Economics',
         'Researcher, Kash Institute of Electronics and Information Industry',
       ],
     },
@@ -84,7 +84,7 @@ window.SITE_DATA = {
       ],
       en: [
         'Dr. Li Huang received her Ph.D. in Computer Science (successive M.S.–Ph.D. program) from the University of Electronic Science and Technology of China (UESTC) in June 2021. She is currently an Associate Professor, Chair of the Department of Artificial Intelligence, and Director of the Computational Competency Training Center at the School of Computing and Artificial Intelligence, Southwestern University of Finance and Economics (SWUFE), and a Researcher at the Kash Institute of Electronics and Information Industry.',
-        'Her research centers on <strong>Contextual Effects in Generation</strong>—investigating how surrounding text, demonstrations, historical trajectories, and relational graphs shape model outputs, introduce or mitigate bias, and govern decision reliability. This thread spans Natural Language Processing (RAG, In-Context Learning, Agentic AI), AI for Business & Financial Decision-Making, and Spatiotemporal Mobility Intelligence.',
+        'Her research centers on <strong>Contextual Effects in Generation</strong>—investigating how surrounding text, demonstrations, historical trajectories, and relational graphs shape model outputs, introduce or mitigate bias, and govern decision reliability. This thread spans Natural Language Processing (RAG, In-Context Learning, Agentic AI), AI for Business & Financial Decision-Making, and Spatiotemporal Data Mining.',
         'She has published over 30 peer-reviewed papers in leading venues including IEEE TKDE, ACM SIGKDD, AAAI, IJCAI, EMNLP, ICDE, ACM SIGSPATIAL, IEEE T-ITS, IEEE TBD, IEEE TCYB, ACM TIST, Neural Networks, and Information Fusion, holds 10+ invention patents, and received the Sole Best Paper Award at KSEM 2023. Alongside academic research, she builds and maintains open-source tools including FoxReader and the Yujian Sign Language Translation system.',
       ],
     },
@@ -168,8 +168,8 @@ window.SITE_DATA = {
       key: 'spatiotemporal',
       index: '03',
       title: {
-        zh: '时空轨迹与城市空间智能',
-        en: 'Spatiotemporal & Mobility Intelligence',
+        zh: '时空轨迹与数据挖掘',
+        en: 'Spatiotemporal Data Mining',
       },
       summary: {
         zh: '围绕虚假/噪声位置分享、长尾分布与动态演化场景，提出移动信息瓶颈（MIB）、双偏移路网恢复、开放世界异常轨迹识别、增量神经算子及自适应风险共识区域表征学习方法。',
@@ -1197,12 +1197,12 @@ window.SITE_DATA = {
 
   recruitment: {
     title: {
-      zh: '欢迎加入空间智能与社会计算（GeoSoc）课题组',
+      zh: '招生与科研合作',
       en: 'Prospective Students & Research Collaboration',
     },
     intro: {
       zh: '课题组氛围开放务实，重视问题意识、实验严谨度与工程落地能力。无论你希望冲击顶会顶刊的科研问题，还是打造真正帮助人的开源软件与 AI 系统，都欢迎发邮件交流。',
-      en: 'We maintain an open, rigorous, and hands-on research group within GeoSoc at SWUFE. Whether you aim to tackle foundational AI research or engineer open-source tools with real-world social impact, feel free to reach out.',
+      en: 'We maintain an open, rigorous, and hands-on research group at SWUFE. Whether you aim to tackle foundational AI research or engineer open-source tools with real-world social impact, feel free to reach out.',
     },
     tracks: [
       {
