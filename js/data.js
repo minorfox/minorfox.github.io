@@ -18,23 +18,36 @@ window.SITE_DATA = {
   },
 
   nav: [
-    { id: 'about', zh: '简介', en: 'About' },
-    { id: 'research', zh: '研究方向', en: 'Research' },
-    { id: 'publications', zh: '学术论文', en: 'Publications' },
-    { id: 'projects', zh: '开源与系统', en: 'Open Source' },
-    { id: 'teaching', zh: '教学与项目', en: 'Teaching & Grants' },
-    { id: 'honors', zh: '履历与服务', en: 'Bio & Service' },
-    { id: 'join', zh: '招生合作', en: 'Join Us' },
+    { id: 'home', icon: 'home', zh: '首页', en: 'Home' },
+    { id: 'about', icon: 'user', zh: '关于', en: 'About' },
+    { id: 'news', icon: 'news', zh: '动态', en: 'News' },
+    { id: 'publications', icon: 'book', zh: '论文', en: 'Publications' },
+    { id: 'projects', icon: 'code', zh: '开源', en: 'Open Source' },
+    { id: 'resume', icon: 'file', zh: '履历', en: 'Resume' },
+    { id: 'service', icon: 'award', zh: '服务', en: 'Service' },
+    { id: 'contact', icon: 'mail', zh: '联系', en: 'Contact' },
   ],
 
   profile: {
-    nameZh: '黄 鹂',
+    nameZh: '黄鹂',
     nameEn: 'Li Huang',
     handle: 'minorfox',
     email: 'lihuang@swufe.edu.cn',
     scholarUrl: 'https://scholar.google.com/citations?user=vlDKPmIAAAAJ',
     githubUrl: 'https://github.com/minorfox',
     swufeUrl: 'https://it.swufe.edu.cn/info/1121/18358.htm',
+    typedItems: {
+      zh: ['西南财经大学副教授 · 人工智能系主任', 'NLP / RAG / AI for Business 研究者', '空间智能与社会计算（GeoSoc）课题组', '开源软件与科技向善实践者'],
+      en: ['Associate Professor at SWUFE', 'Chair, Dept. of Artificial Intelligence', 'NLP, RAG & AI for Business Researcher', 'Open-Source & Tech-for-Good Builder'],
+    },
+    motto: {
+      zh: '科研向难求真知，课堂向活育新人，技术向善抵达人。',
+      en: 'Rigorous inquiry in research, clarity in teaching, and human-centered craft in technology.',
+    },
+    city: {
+      zh: '中国 · 四川成都',
+      en: 'Chengdu, Sichuan, China',
+    },
     eyebrow: {
       zh: '副教授 · 硕士生导师 · 人工智能系主任',
       en: 'Associate Professor · M.S. Advisor · Chair, Dept. of AI',

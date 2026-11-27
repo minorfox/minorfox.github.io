@@ -4,8 +4,8 @@
 
 ## 特性
 
-- **中英双语切换**：支持页面顶栏一键切换中文 / English，并支持 `?lang=en` 或 `?lang=zh` 链接直达。
-- **亮色 / 暗色主题**：默认学术暖纸色调，支持手动切换与系统偏好自动适配，内置打印友好的 CV 样式。
+- **清爽无框学术排版**：纯白背景 + 学术钴蓝（`#0563bb`）点缀 + 左侧悬浮圆形图标导航栏 + 动态打字副标题 + 双栏时间线履历，内置打印友好的 CV 样式。
+- **中英双语切换**：右上角一键切换中文 / English，并支持 `?lang=en` 或 `?lang=zh` 链接直达。
 - **数据与视图分离**：所有简介、动态、37 篇已核验论文（含 BibTeX）、开源项目、教学课程、科研项目与获奖信息均集中在 `js/data.js`，后续更新无需改动 HTML/CSS。
 - **零构建依赖**：纯静态 HTML + CSS + Vanilla JS，包含 `.nojekyll`，推送至 GitHub 即可直接上线，也支持本地双击 `index.html` 离线打开。
 
@@ -16,14 +16,15 @@ minorfox.github.io/
 ├── index.html             # 主页面结构
 ├── .nojekyll              # 禁用 GitHub Pages 默认 Jekyll 处理
 ├── assets/
-│   ├── portrait.jpg       # 个人证件/形象照
+│   ├── hero-bg.jpg        # 顶部横幅背景图
+│   ├── portrait.jpg       # 个人形象照
 │   ├── foxreader-icon.png # FoxReader 项目图标
 │   └── favicon.svg        # 网页图标
 ├── css/
-│   └── styles.css         # 响应式与亮/暗主题样式系统
+│   └── styles.css         # 无框学术风响应式样式表
 └── js/
     ├── data.js            # 中英双语结构化数据（日常维护仅改此文件）
-    └── app.js             # 双语渲染、论文筛选、搜索与 BibTeX 弹窗
+    └── app.js             # 双语渲染、打字机副标题、论文筛选与 BibTeX 弹窗
 ```
 
 ## 本地预览

@@ -3,157 +3,118 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>黄鹂 (Li Huang) · 西南财经大学副教授</title>
+  <title>黄鹂 (Li Huang) — SWUFE · NLP, RAG, AI for Business</title>
   <meta name="description" content="黄鹂，西南财经大学计算机与人工智能学院副教授、人工智能系主任、计算能力培养中心主任。研究方向：生成过程中的上下文效应、NLP/RAG/ICL、AI for Business、时空数据挖掘。" />
-  <meta property="og:title" content="Li Huang (黄鹂) · Associate Professor, SWUFE" />
-  <meta property="og:description" content="Contextual Effects in Generation · NLP/RAG/ICL · AI for Business · Spatiotemporal Intelligence · Open-Source Systems." />
+  <meta property="og:title" content="Li Huang (黄鹂) — Associate Professor, SWUFE" />
+  <meta property="og:description" content="Associate Professor at SWUFE. Research in Contextual Effects in Generation, NLP/RAG/ICL, AI for Business, and Spatiotemporal Intelligence." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/portrait.jpg" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 
-  <!-- Editorial serif + clean humanist sans + monospace (graceful offline fallback to system fonts) -->
+  <!-- Clean geometric sans (Raleway + Roboto + Poppins + Noto Sans SC, graceful offline fallback) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,500&family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Poppins:wght@500;600;700&family=Raleway:wght@600;700;800&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <!-- Sticky Top Navigation -->
-  <header class="site-header">
-    <div class="container nav-inner">
-      <a href="#about" class="brand" aria-label="Home">
-        <span id="brand-name">黄 鹂</span>
-        <span class="brand-dot" aria-hidden="true"></span>
-        <span class="brand-sub">@minorfox</span>
-      </a>
+  <!-- Subtle Top-Right Language Switch -->
+  <div class="floating-tools" role="group" aria-label="Language switch">
+    <button type="button" class="lang-btn active" data-lang="zh">中文</button>
+    <button type="button" class="lang-btn" data-lang="en">EN</button>
+  </div>
 
-      <nav aria-label="Primary">
-        <ul class="nav-links" id="nav-links"></ul>
-      </nav>
+  <!-- Mobile Sidebar Toggle Button (<1200px) -->
+  <button type="button" class="header-toggle" id="header-toggle" aria-label="Toggle navigation" aria-expanded="false">
+    <svg id="menu-icon-open" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+      <line x1="4" y1="7" x2="20" y2="7"></line>
+      <line x1="4" y1="12" x2="20" y2="12"></line>
+      <line x1="4" y1="17" x2="20" y2="17"></line>
+    </svg>
+    <svg id="menu-icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+      <line x1="6" y1="6" x2="18" y2="18"></line>
+      <line x1="18" y1="6" x2="6" y2="18"></line>
+    </svg>
+  </button>
 
-      <div class="nav-controls">
-        <div class="lang-toggle" role="group" aria-label="Language switch">
-          <button type="button" class="lang-btn active" data-lang="zh">中文</button>
-          <button type="button" class="lang-btn" data-lang="en">EN</button>
-        </div>
-        <button type="button" class="icon-btn" id="theme-toggle" aria-label="Toggle color theme" title="Toggle theme">
-          <svg id="theme-icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="4"></circle>
-            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
-          </svg>
-          <svg id="theme-icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"></path>
-          </svg>
-        </button>
-        <button type="button" class="icon-btn menu-btn" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-            <line x1="4" y1="7" x2="20" y2="7"></line>
-            <line x1="4" y1="12" x2="20" y2="12"></line>
-            <line x1="4" y1="17" x2="20" y2="17"></line>
-          </svg>
-        </button>
-      </div>
-    </div>
+  <!-- Floating Left Circular Pill Navigation (MyResume style) -->
+  <header id="header" class="header" aria-label="Primary navigation">
+    <nav class="navmenu" id="navmenu">
+      <ul id="nav-links"></ul>
+    </nav>
   </header>
 
-  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile Navigation">
-    <ul id="mobile-nav-links"></ul>
-  </nav>
-
-  <main>
-    <!-- Hero / About -->
-    <section class="hero" id="about">
-      <div class="container">
-        <div class="hero-grid">
-          <div class="hero-main">
-            <div class="hero-eyebrow" id="hero-eyebrow"></div>
-            <h1 class="hero-name" id="hero-name"></h1>
-            <p class="hero-quote" id="hero-quote"></p>
-            <ul class="affiliations" id="hero-affiliations"></ul>
-
-            <div class="hero-actions" id="hero-actions"></div>
-
-            <div class="hero-bio" id="hero-bio"></div>
-          </div>
-
-          <aside class="portrait-card" aria-label="Portrait and office">
-            <div class="portrait-frame">
-              <img src="assets/portrait.jpg" alt="Dr. Li Huang (黄鹂)" width="889" height="1346" />
-            </div>
-            <div class="portrait-meta">
-              <div class="status-pill">
-                <span class="status-dot" aria-hidden="true"></span>
-                <span id="status-badge"></span>
-              </div>
-              <div class="office-line">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-                <span id="office-text"></span>
-              </div>
-            </div>
-          </aside>
+  <main class="main">
+    <!-- 1. Compact Full-Bleed Atmospheric Hero -->
+    <section id="home" class="home">
+      <img class="home-bg" src="assets/hero-bg.jpg" alt="" aria-hidden="true" />
+      <div class="container home-inner">
+        <div class="home-content">
+          <h1 class="home-name" id="home-name"></h1>
+          <p class="home-typed-line">
+            <span class="typed-text" id="typed-text"></span><span class="typed-cursor" aria-hidden="true"></span>
+          </p>
+          <div class="social-links" id="home-socials"></div>
         </div>
-
-        <div class="metrics-strip" id="metrics-strip"></div>
       </div>
     </section>
 
-    <!-- News & Milestones -->
-    <section class="section" id="news">
+    <!-- 2. About -->
+    <section id="about" class="section">
       <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="section-kicker" id="news-kicker"></div>
-            <h2 class="section-title" id="news-title"></h2>
+        <div class="section-title">
+          <h2 id="about-heading"></h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-photo">
+            <img src="assets/portrait.jpg" alt="Dr. Li Huang (黄鹂)" />
           </div>
-          <p class="section-sub" id="news-sub"></p>
+
+          <div class="about-content">
+            <h3 class="about-name" id="about-name"></h3>
+            <div class="about-meta-grid" id="about-meta"></div>
+            <div class="about-bio" id="about-bio"></div>
+          </div>
+        </div>
+
+        <!-- Borderless Facts Row -->
+        <div class="facts-row" id="facts-row"></div>
+      </div>
+    </section>
+
+    <!-- 3. News -->
+    <section id="news" class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2 id="news-heading"></h2>
         </div>
         <div class="news-list" id="news-list"></div>
+        <div class="news-more-wrap" id="news-more-wrap"></div>
       </div>
     </section>
 
-    <!-- Research Agenda -->
-    <section class="section section-alt" id="research">
+    <!-- 4. Publications (Borderless Typographic List) -->
+    <section id="publications" class="section">
       <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="section-kicker" id="research-kicker"></div>
-            <h2 class="section-title" id="research-title"></h2>
-          </div>
-          <p class="section-sub" id="research-sub"></p>
-        </div>
-        <div class="pillars-grid" id="pillars-grid"></div>
-      </div>
-    </section>
-
-    <!-- Publications -->
-    <section class="section" id="publications">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="section-kicker" id="pub-kicker"></div>
-            <h2 class="section-title" id="pub-title"></h2>
-          </div>
-          <p class="section-sub" id="pub-sub"></p>
+        <div class="section-title">
+          <h2 id="pub-heading"></h2>
+          <p id="pub-subtitle"></p>
         </div>
 
-        <div class="pub-toolbar">
-          <div class="filter-pills" id="pub-filters" role="tablist" aria-label="Publication category filters"></div>
-          <div class="pub-search-wrap">
-            <label class="pub-search" aria-label="Search publications">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="11" cy="11" r="8"></circle>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-              </svg>
-              <input type="search" id="pub-search-input" autocomplete="off" />
-            </label>
-          </div>
+        <div class="pub-controls">
+          <div class="pub-filters" id="pub-filters" role="tablist" aria-label="Publication filters"></div>
+          <label class="pub-search" aria-label="Search publications">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="search" id="pub-search-input" autocomplete="off" />
+          </label>
         </div>
 
-        <div class="pub-meta-bar">
+        <div class="pub-meta-line">
           <span id="pub-count"></span>
           <span id="pub-legend"></span>
         </div>
@@ -162,85 +123,80 @@
       </div>
     </section>
 
-    <!-- Open Source & Engineering Systems -->
-    <section class="section section-alt" id="projects">
+    <!-- 5. Open Source & Systems -->
+    <section id="projects" class="section">
       <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="section-kicker" id="proj-kicker"></div>
-            <h2 class="section-title" id="proj-title"></h2>
-          </div>
-          <p class="section-sub" id="proj-sub"></p>
+        <div class="section-title">
+          <h2 id="proj-heading"></h2>
+          <p id="proj-subtitle"></p>
         </div>
         <div class="projects-grid" id="projects-grid"></div>
       </div>
     </section>
 
-    <!-- Teaching & Grants -->
-    <section class="section" id="teaching">
+    <!-- 6. Resume (2-Column Left-Blue-Timeline) -->
+    <section id="resume" class="section">
       <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="section-kicker" id="teach-kicker"></div>
-            <h2 class="section-title" id="teach-title"></h2>
-          </div>
-          <p class="section-sub" id="teach-sub"></p>
+        <div class="section-title">
+          <h2 id="resume-heading"></h2>
         </div>
-        <div class="two-col">
-          <div class="panel" id="teaching-panel"></div>
-          <div class="panel" id="grants-panel"></div>
+        <div class="resume-grid">
+          <div class="resume-col" id="resume-col-left"></div>
+          <div class="resume-col" id="resume-col-right"></div>
         </div>
       </div>
     </section>
 
-    <!-- Biography, Honors & Service -->
-    <section class="section section-alt" id="honors">
+    <!-- 7. Service & Prospective Students -->
+    <section id="service" class="section">
       <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="section-kicker" id="bio-kicker"></div>
-            <h2 class="section-title" id="bio-title"></h2>
-          </div>
-          <p class="section-sub" id="bio-sub"></p>
+        <div class="section-title">
+          <h2 id="service-heading"></h2>
         </div>
-        <div class="two-col">
-          <div class="panel" id="timeline-panel"></div>
-          <div class="panel" id="honors-panel"></div>
-        </div>
+        <div class="service-list" id="service-list"></div>
       </div>
     </section>
 
-    <!-- Prospective Students / Join Us -->
-    <section class="section" id="join">
+    <!-- 8. Contact -->
+    <section id="contact" class="section">
       <div class="container">
-        <div class="join-card" id="join-card"></div>
+        <div class="section-title">
+          <h2 id="contact-heading"></h2>
+        </div>
+        <div class="contact-grid" id="contact-grid"></div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div id="footer-copy"></div>
-      <div class="footer-links" id="footer-links"></div>
+  <!-- Subtle Off-White Centered Footer -->
+  <footer id="footer" class="footer">
+    <div class="container">
+      <h3 class="footer-name" id="footer-name"></h3>
+      <p class="footer-motto" id="footer-motto"></p>
+      <div class="footer-socials" id="footer-socials"></div>
+      <div class="footer-copyright" id="footer-copy"></div>
     </div>
   </footer>
 
-  <!-- BibTeX Citation Modal -->
+  <!-- Fixed Scroll-To-Top Button -->
+  <a href="#home" class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </a>
+
+  <!-- Lightweight BibTeX Modal -->
   <div class="modal-backdrop" id="bib-modal" role="dialog" aria-modal="true" aria-labelledby="bib-modal-title" hidden>
     <div class="modal-dialog">
       <div class="modal-head">
         <h3 class="modal-title" id="bib-modal-title">BibTeX</h3>
-        <button type="button" class="icon-btn" id="bib-close" aria-label="Close">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
+        <button type="button" class="modal-close" id="bib-close" aria-label="Close">×</button>
       </div>
       <pre class="modal-pre" id="bib-code"></pre>
       <div class="modal-actions">
-        <button type="button" class="btn" id="bib-close-btn"></button>
-        <button type="button" class="btn btn-primary" id="bib-copy-btn"></button>
+        <button type="button" class="btn-outline" id="bib-close-btn"></button>
+        <button type="button" class="btn-solid" id="bib-copy-btn"></button>
       </div>
     </div>
   </div>
