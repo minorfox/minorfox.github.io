@@ -36,9 +36,9 @@ window.SITE_DATA = {
     scholarUrl: 'https://scholar.google.com/citations?user=vlDKPmIAAAAJ',
     githubUrl: 'https://github.com/minorfox',
     swufeUrl: 'https://it.swufe.edu.cn/info/1121/18358.htm',
-    typedItems: {
-      zh: ['西南财经大学副教授 · 人工智能系主任', 'NLP / RAG / AI for Business 研究者', '开源软件与科技向善实践者'],
-      en: ['Associate Professor at SWUFE', 'Chair, Dept. of Artificial Intelligence', 'NLP, RAG & AI for Business Researcher', 'Open-Source & Tech-for-Good Builder'],
+    heroSubtitle: {
+      zh: 'NLP · RAG · In-Context Learning · AI for Business',
+      en: 'NLP · RAG · In-Context Learning · AI for Business',
     },
     motto: {
       zh: '科研向难求真知，课堂向活育新人，技术向善抵达人。',

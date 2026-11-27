@@ -142,7 +142,6 @@
   let newsExpanded = false;
   let activeBibtex = '';
   let toastTimer = null;
-  let typedTimer = null;
 
   function safeGet(k) { try { return localStorage.getItem(k); } catch (_) { return null; } }
   function safeSet(k, v) { try { localStorage.setItem(k, v); } catch (_) {} }
@@ -185,50 +184,6 @@
     } catch (_) {
       showToast(text);
     }
-  }
-
-  // Typed subtitle animation (MyResume signature effect)
-  function startTyped() {
-    clearTimeout(typedTimer);
-    const el = document.getElementById('typed-text');
-    const items = t(D.profile.typedItems);
-    if (!el || !items || !items.length) return;
-
-    const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduceMotion) {
-      el.textContent = items[0];
-      return;
-    }
-
-    let idx = 0;
-    let charIdx = items[0].length;
-    let deleting = false;
-    el.textContent = items[0];
-
-    function step() {
-      const current = items[idx];
-      if (!deleting) {
-        if (charIdx < current.length) {
-          charIdx++;
-          el.textContent = current.slice(0, charIdx);
-          typedTimer = setTimeout(step, 70);
-        } else {
-          deleting = true;
-          typedTimer = setTimeout(step, 2400);
-        }
-      } else {
-        if (charIdx > 0) {
-          charIdx--;
-          el.textContent = current.slice(0, charIdx);
-          typedTimer = setTimeout(step, 34);
-        } else {
-          deleting = false;
-          idx = (idx + 1) % items.length;
-          typedTimer = setTimeout(step, 280);
-        }
-      }
-    }
-    typedTimer = setTimeout(step, 2200);
   }
 
   // 1. Left Floating Sidebar Nav
@@ -289,7 +244,7 @@
       copyText(P.email, U.emailCopied);
     });
 
-    startTyped();
+    document.getElementById('typed-text').textContent = t(P.heroSubtitle);
   }
 
   // 3. About & Facts (#about)
