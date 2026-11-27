@@ -39,7 +39,6 @@
       metaOfficial: '西财主页',
       metaOfficialLink: '计算机与人工智能学院',
       metaPlatform: '维护项目',
-      metaPlatformLink: '艾可瑞亚 Echorial (echorial.com)',
       metaOpenSource: '开源工具',
       switchLangBtn: 'English',
       newsHeading: '近期动态',
@@ -50,8 +49,8 @@
       pubSearchPlaceholder: '搜索标题、期刊/会议、年份或合作者…',
       pubLegend: '* 表示通讯作者；加粗标出本人姓名',
       pubEmpty: '未找到匹配的论文，请清空筛选或更换关键词。',
-      projHeading: '开源与维护项目',
-      projSubtitle: '个人持续维护的 Echorial（echorial.com）与 GitHub @minorfox 开源工具',
+      projHeading: '维护项目与开源工具',
+      projSubtitle: '持续维护的 Echorial、语见（Yujian）项目与开源工具 FoxReader',
       resumeHeading: '学术履历、教学与荣誉',
       resumePositions: '工作与教育经历',
       resumeTeaching: '教学与课程建设',
@@ -95,9 +94,8 @@
       metaGitHub: 'GitHub',
       metaOfficial: 'SWUFE',
       metaOfficialLink: 'Official Faculty Page',
-      metaPlatform: 'Project',
-      metaPlatformLink: 'Echorial (echorial.com)',
-      metaOpenSource: 'Open Source',
+      metaPlatform: 'Projects',
+      metaOpenSource: 'Open-Source Tool',
       switchLangBtn: '中文',
       newsHeading: 'News',
       showMore: 'Show More',
@@ -107,8 +105,8 @@
       pubSearchPlaceholder: 'Search title, venue, year, or co-author…',
       pubLegend: '* Corresponding Author; my name is highlighted in bold',
       pubEmpty: 'No matching publications found.',
-      projHeading: 'Projects & Open Source',
-      projSubtitle: 'Actively maintained project Echorial (echorial.com) and open-source tools on GitHub @minorfox',
+      projHeading: 'Projects & Open-Source Tools',
+      projSubtitle: 'Actively maintained projects Echorial & Yujian, alongside the open-source tool FoxReader',
       resumeHeading: 'Resume',
       resumePositions: 'Positions & Education',
       resumeTeaching: 'Teaching & Curriculum',
@@ -281,8 +279,8 @@
       <div class="meta-item"><span class="meta-chevron">›</span><span class="meta-label">${esc(U.metaGitHub)}:</span><span class="meta-val"><a href="${esc(P.githubUrl)}" target="_blank" rel="noopener noreferrer">@minorfox</a></span></div>
       <div class="meta-item"><span class="meta-chevron">›</span><span class="meta-label">${esc(U.metaCity)}:</span><span class="meta-val">${esc(t(P.city))}</span></div>
       <div class="meta-item"><span class="meta-chevron">›</span><span class="meta-label">${esc(U.metaOfficial)}:</span><span class="meta-val"><a href="${esc(P.swufeUrl)}" target="_blank" rel="noopener noreferrer">${esc(U.metaOfficialLink)}</a></span></div>
-      <div class="meta-item"><span class="meta-chevron">›</span><span class="meta-label">${esc(U.metaPlatform)}:</span><span class="meta-val"><a href="${esc(P.echorialUrl)}" target="_blank" rel="noopener noreferrer">${esc(U.metaPlatformLink)}</a></span></div>
-      <div class="meta-item"><span class="meta-chevron">›</span><span class="meta-label">${esc(U.metaOpenSource)}:</span><span class="meta-val"><a href="https://github.com/minorfox/FoxReader" target="_blank" rel="noopener noreferrer">FoxReader</a> · <a href="https://github.com/minorfox/yujian-sign-translation" target="_blank" rel="noopener noreferrer">${lang === 'zh' ? '语见' : 'Yujian'}</a></span></div>
+      <div class="meta-item"><span class="meta-chevron">›</span><span class="meta-label">${esc(U.metaPlatform)}:</span><span class="meta-val"><a href="${esc(P.echorialUrl)}" target="_blank" rel="noopener noreferrer">${lang === 'zh' ? '艾可瑞亚 Echorial' : 'Echorial'}</a> · <a href="https://github.com/minorfox/yujian-sign-translation" target="_blank" rel="noopener noreferrer">${lang === 'zh' ? '语见' : 'Yujian'}</a></span></div>
+      <div class="meta-item"><span class="meta-chevron">›</span><span class="meta-label">${esc(U.metaOpenSource)}:</span><span class="meta-val"><a href="https://github.com/minorfox/FoxReader" target="_blank" rel="noopener noreferrer">FoxReader</a></span></div>
     `;
 
     document.getElementById('about-copy-email').addEventListener('click', () => {

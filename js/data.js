@@ -79,11 +79,11 @@ window.SITE_DATA = {
     bio: {
       zh: [
         '研究主线聚焦于<strong>生成过程中的上下文效应（Contextual Effects in Generation）</strong>，探索文本前后文、少样本示例、历史交互与结构关系如何影响模型的生成与判断，进而提升大语言模型（RAG、In-Context Learning、Agentic AI）、财经智能决策与时空轨迹学习在信息不足或干扰环境下的稳健性与可信度。',
-        '近五年在 IEEE TKDE、ACM SIGKDD、AAAI、IJCAI、EMNLP、ICDE、ACM SIGSPATIAL、IEEE T-ITS、IEEE TBD、IEEE TCYB、ACM TIST、Neural Networks、Information Fusion 等顶级会议与期刊发表论文 30 余篇，获 KSEM 2023 唯一最佳论文奖与四川省计算机学会科学技术一等奖，授权发明专利 10 余项；同时持续维护 <strong>艾可瑞亚（Echorial）</strong> 互动判断力训练项目，以及 FoxReader、语见手语翻译等开源工具。',
+        '近五年在 IEEE TKDE、ACM SIGKDD、AAAI、IJCAI、EMNLP、ICDE、ACM SIGSPATIAL、IEEE T-ITS、IEEE TBD、IEEE TCYB、ACM TIST、Neural Networks、Information Fusion 等顶级会议与期刊发表论文 30 余篇，获 KSEM 2023 唯一最佳论文奖与四川省计算机学会科学技术一等奖，授权发明专利 10 余项；同时持续维护 <strong>艾可瑞亚（Echorial）</strong>、<strong>语见手语翻译</strong>等项目，并开发了开源文献阅读工具 <strong>FoxReader</strong>。',
       ],
       en: [
         'Research centers on <strong>Contextual Effects in Generation</strong>—investigating how surrounding text, demonstrations, historical trajectories, and relational graphs shape model outputs, introduce or mitigate bias, and govern decision reliability. This thread spans Natural Language Processing (RAG, In-Context Learning, Agentic AI), AI for Business & Financial Decision-Making, and Spatiotemporal Data Mining.',
-        'Published over 30 peer-reviewed papers in leading venues including IEEE TKDE, ACM SIGKDD, AAAI, IJCAI, EMNLP, ICDE, ACM SIGSPATIAL, IEEE T-ITS, IEEE TBD, IEEE TCYB, ACM TIST, Neural Networks, and Information Fusion, with 10+ invention patents and the Sole Best Paper Award at KSEM 2023. Alongside academic research, maintains the <strong>Echorial</strong> interactive judgment training project as well as open-source tools including FoxReader and Yujian Sign Language Translation.',
+        'Published over 30 peer-reviewed papers in leading venues including IEEE TKDE, ACM SIGKDD, AAAI, IJCAI, EMNLP, ICDE, ACM SIGSPATIAL, IEEE T-ITS, IEEE TBD, IEEE TCYB, ACM TIST, Neural Networks, and Information Fusion, with 10+ invention patents and the Sole Best Paper Award at KSEM 2023. Alongside academic research, maintains projects including <strong>Echorial</strong> and <strong>Yujian</strong> (Chinese Sign Language translation), and builds the open-source paper reader <strong>FoxReader</strong>.',
       ],
     },
     stats: [
@@ -987,29 +987,6 @@ window.SITE_DATA = {
       ],
     },
     {
-      id: 'foxreader',
-      name: 'FoxReader',
-      badge: { zh: '开源桌面应用 · v0.3.2 · MIT', en: 'Open-Source Desktop · v0.3.2 · MIT' },
-      icon: 'assets/foxreader-icon.png',
-      tagline: {
-        zh: '纯本地离线运行的桌面端 PDF 论文管理与阅读批注工具',
-        en: 'Pure-local, offline-first desktop PDF paper manager & reader with out-of-band annotations',
-      },
-      description: {
-        zh: '面向科研工作者的轻量化文献管理与阅读工具：坚持原始 PDF 只读不改写，所有高亮坐标、公式/图表区域截图、整篇 Markdown 笔记与 BibTeX 元数据外置存储于单目录 SQLite FTS5 数据库，天然支持双栏学术排版选区清洗与 OneDrive 跨设备安全接力同步。',
-        en: 'Built for researchers who prefer local ownership over cloud lock-in. Keeps source PDFs strictly read-only while storing normalized highlights, formula/figure region snapshots, Markdown notes, and BibTeX metadata in a portable SQLite FTS5 directory—complete with double-column selection cleanup and OneDrive lock-safe sync.',
-      },
-      stack: ['Electron', 'React', 'TypeScript', 'Tailwind CSS', 'pdfjs-dist', 'SQLite FTS5'],
-      highlights: {
-        zh: ['Windows & macOS 自动打包发布', '双栏清洗 + Alt 拖拽公式截图', 'arXiv / OpenAlex / Crossref 元数据补全'],
-        en: ['Cross-platform Windows & macOS releases', 'Double-column cleanup & formula snapshots', 'arXiv / OpenAlex / Crossref BibTeX lookup'],
-      },
-      links: [
-        { label: { zh: 'GitHub 仓库', en: 'GitHub Repo' }, url: 'https://github.com/minorfox/FoxReader' },
-        { label: { zh: '下载安装包', en: 'Releases' }, url: 'https://github.com/minorfox/FoxReader/releases' },
-      ],
-    },
-    {
       id: 'yujian',
       name: '语见 · Yujian',
       badge: { zh: '2026.08 开源 · 省赛二等奖 · MIT', en: 'Open-Sourced Aug 2026 · 2nd Prize · MIT' },
@@ -1029,6 +1006,29 @@ window.SITE_DATA = {
       },
       links: [
         { label: { zh: 'GitHub 仓库', en: 'GitHub Repo' }, url: 'https://github.com/minorfox/yujian-sign-translation' },
+      ],
+    },
+    {
+      id: 'foxreader',
+      name: 'FoxReader',
+      badge: { zh: '开源桌面工具 · v0.3.2 · MIT', en: 'Open-Source Tool · v0.3.2 · MIT' },
+      icon: 'assets/foxreader-icon.png',
+      tagline: {
+        zh: '纯本地离线运行的桌面端 PDF 论文管理与阅读批注工具',
+        en: 'Pure-local, offline-first desktop PDF paper manager & reader with out-of-band annotations',
+      },
+      description: {
+        zh: '面向科研工作者的轻量化文献管理与阅读工具：坚持原始 PDF 只读不改写，所有高亮坐标、公式/图表区域截图、整篇 Markdown 笔记与 BibTeX 元数据外置存储于单目录 SQLite FTS5 数据库，天然支持双栏学术排版选区清洗与 OneDrive 跨设备安全接力同步。',
+        en: 'Built for researchers who prefer local ownership over cloud lock-in. Keeps source PDFs strictly read-only while storing normalized highlights, formula/figure region snapshots, Markdown notes, and BibTeX metadata in a portable SQLite FTS5 directory—complete with double-column selection cleanup and OneDrive lock-safe sync.',
+      },
+      stack: ['Electron', 'React', 'TypeScript', 'Tailwind CSS', 'pdfjs-dist', 'SQLite FTS5'],
+      highlights: {
+        zh: ['Windows & macOS 自动打包发布', '双栏清洗 + Alt 拖拽公式截图', 'arXiv / OpenAlex / Crossref 元数据补全'],
+        en: ['Cross-platform Windows & macOS releases', 'Double-column cleanup & formula snapshots', 'arXiv / OpenAlex / Crossref BibTeX lookup'],
+      },
+      links: [
+        { label: { zh: 'GitHub 仓库', en: 'GitHub Repo' }, url: 'https://github.com/minorfox/FoxReader' },
+        { label: { zh: '下载安装包', en: 'Releases' }, url: 'https://github.com/minorfox/FoxReader/releases' },
       ],
     },
     {
