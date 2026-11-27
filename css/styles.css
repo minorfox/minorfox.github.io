@@ -512,9 +512,6 @@ button {
 .about-photo img {
   width: 100%;
   height: auto;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  object-position: center 12%;
   border-radius: 6px;
   border: 1px solid #e9edf2;
 }
