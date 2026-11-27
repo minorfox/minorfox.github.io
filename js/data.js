@@ -104,8 +104,8 @@ window.SITE_DATA = {
     {
       date: '2026.10',
       tag: { zh: '项目', en: 'Launch' },
-      zh: '正式上线个人维护项目 <strong><a href="https://echorial.com" target="_blank" rel="noopener noreferrer">艾可瑞亚（Echorial）</a></strong>，提供大学生反诈独立核验沙盘与电商数据 AI 幻觉纠偏工作台，支持免登录直接体验。',
-      en: 'Launched personal project <strong><a href="https://echorial.com" target="_blank" rel="noopener noreferrer">Echorial</a></strong> (echorial.com), featuring campus anti-fraud verification sandboxes and an e-commerce AI-auditing workbench with open guest access.',
+      zh: '正式上线个人维护项目 <strong><a href="https://echorial.com" target="_blank" rel="noopener noreferrer">艾可瑞亚（Echorial）</a></strong>（个人能力训练场），提供大学生反诈独立核验沙盘与电商数据 AI 幻觉纠偏工作台。',
+      en: 'Launched personal project <strong><a href="https://echorial.com" target="_blank" rel="noopener noreferrer">Echorial</a></strong> (echorial.com), a personal capability training ground featuring campus anti-fraud verification sandboxes and an e-commerce AI-auditing workbench.',
     },
     {
       date: '2026.08',
@@ -972,7 +972,7 @@ window.SITE_DATA = {
       id: 'echorial',
       category: 'project',
       name: 'Echorial · 艾可瑞亚',
-      badge: { zh: '2026.10 上线 · 免登录体验 · echorial.com', en: 'Launched Oct 2026 · Open Access · echorial.com' },
+      badge: { zh: '2026.10 上线 · 个人能力训练场 · echorial.com', en: 'Launched Oct 2026 · Personal Capability Training Ground · echorial.com' },
       icon: 'assets/echorial-mark.svg',
       tagline: {
         zh: '面向个人的互动判断力与核验能力训练项目——在高压话术与复杂数据前，先查证、再行动',
@@ -984,8 +984,8 @@ window.SITE_DATA = {
       },
       stack: ['Node.js', 'Interactive Sandboxes', 'AI Draft Auditing', 'Evidence-Guided Coaching', 'SQLite Telemetry'],
       highlights: {
-        zh: ['5 个反诈危机核验沙盘 + 真人语音来电仿真', '7 张业务表 / 1,089 行订单与 AI 幻觉纠偏工作台', '通用版免登录直接开练，支持教学评估与研究复盘'],
-        en: ['5 anti-fraud crisis sandboxes with voice-call simulation', 'E-commerce workbench with 1,089 rows & AI draft auditing', 'Open guest access with structured research telemetry'],
+        zh: ['5 个反诈危机核验沙盘 + 真人语音来电仿真', '7 张业务表 / 1,089 行订单与 AI 幻觉纠偏工作台', '内置“艾可（Echo）”循证伴学提示闭环'],
+        en: ['5 anti-fraud crisis sandboxes with voice-call simulation', 'E-commerce workbench with 1,089 rows & AI draft auditing', 'Evidence-guided Echo coaching loop'],
       },
       links: [
         { label: { zh: '在线访问 · echorial.com', en: 'Live Site · echorial.com' }, url: 'https://echorial.com' },
@@ -997,20 +997,20 @@ window.SITE_DATA = {
       id: 'yujian',
       category: 'project',
       name: '语见 · Yujian',
-      badge: { zh: '2026.08 开源 · 省赛二等奖 · MIT', en: 'Open-Sourced Aug 2026 · 2nd Prize · MIT' },
+      badge: { zh: '2026.08 开源 · 无障碍手语翻译 · MIT', en: 'Open-Sourced Aug 2026 · Sign Language AI · MIT' },
       monogram: '语',
       tagline: {
         zh: '面向无障碍沟通的中国手语双向翻译与 AI 交互系统',
         en: 'Chinese Sign Language translation & accessible AI interaction system',
       },
       description: {
-        zh: '由《人工智能与现代科技》通识课延伸孵化，指导本科生团队共同研发，探索听障群体自主与健听者及大语言模型对话的无障碍入口。工程仓库包含微信小程序 MVP、FastAPI + Uni-Sign + RTMLib 本地姿态识别推理后端与移动端原型，获 2026 年中国大学生计算机设计大赛四川省级赛本科组二等奖。',
-        en: 'Incubated from the AI General Education course with undergraduate researchers to help sign language users communicate directly with both hearing peers and LLMs. Includes a WeChat Mini Program MVP, a FastAPI + Uni-Sign + RTMLib pose-based inference backend, and an Expo prototype. Awarded 2nd Prize at the 2026 Sichuan Collegiate Computer Design Competition.',
+        zh: '面向听障群体的中国手语双向翻译与无障碍 AI 交互系统，探索听障用户自主与健听者及大语言模型直接对话的端到端入口。工程仓库包含轻量化微信小程序 MVP（主包精简至 ~390 KB）、FastAPI + Uni-Sign + RTMLib 本地姿态识别推理后端与移动端原型，并提供全链路工程核查与评测文档。',
+        en: 'A bidirectional Chinese Sign Language translation and accessible AI interaction system enabling sign language users to communicate directly with both hearing peers and LLMs. The open-source repository includes a lightweight WeChat Mini Program MVP (~390 KB main bundle), a FastAPI + Uni-Sign + RTMLib local pose-based inference backend, an Expo mobile prototype, and full-pipeline engineering audits.',
       },
       stack: ['Python', 'FastAPI', 'Uni-Sign', 'RTMLib', 'WeChat Mini Program', 'Expo'],
       highlights: {
-        zh: ['2026 计设省赛本科组二等奖', '小程序主包精简至 ~390 KB', '全链路工程核查与诚实评测文档'],
-        en: ['2026 Sichuan Computer Design 2nd Prize', 'Lightweight ~390 KB Mini Program MVP', 'Transparent model audit & engineering tests'],
+        zh: ['手语双向翻译 + 大语言模型无障碍交互', '小程序主包精简至 ~390 KB', '全链路工程核查与诚实评测文档'],
+        en: ['Bidirectional CSL translation & LLM accessibility', 'Lightweight ~390 KB Mini Program MVP', 'Transparent model audit & engineering tests'],
       },
       links: [
         { label: { zh: 'GitHub 仓库', en: 'GitHub Repo' }, url: 'https://github.com/minorfox/yujian-sign-translation' },
