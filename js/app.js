@@ -40,6 +40,8 @@
       metaOfficialLink: '计算机与人工智能学院',
       metaPlatform: '维护项目',
       metaOpenSource: '开源工具',
+      metaWechat: '公众号 / Agent',
+      metaVideo: '视频号',
       switchLangBtn: 'English',
       newsHeading: '近期动态',
       showMore: '展开全部动态',
@@ -49,9 +51,10 @@
       pubSearchPlaceholder: '搜索标题、期刊/会议、年份或合作者…',
       pubLegend: '* 表示通讯作者；加粗标出本人姓名',
       pubEmpty: '未找到匹配的论文，请清空筛选或更换关键词。',
-      projHeading: '维护项目与开源工具',
-      projSubtitle: '聚焦持续维护的应用项目与开源科研工具；多篇论文开源代码亦陆续汇入 GitHub 仓库',
+      projHeading: '维护项目、科普与开源工具',
+      projSubtitle: '涵盖个人维护项目、课程伴学 Agent 与 AI 科普渠道，以及开源科研工具；多篇论文代码陆续汇入 GitHub 仓库',
       projGroupMaintained: '维护项目',
+      projGroupOutreach: '公众号、Agent 与视频号',
       projGroupTools: '开源工具',
       projMoreTitle: '更多论文开源代码',
       projMoreDesc: '已发表论文的实验与复现代码正按时间顺序陆续迁入 GitHub，单篇入口亦见<a href="#publications">学术论文</a>栏的 <code>[Code]</code> 链接。',
@@ -100,6 +103,8 @@
       metaOfficialLink: 'Official Faculty Page',
       metaPlatform: 'Projects',
       metaOpenSource: 'Open-Source Tool',
+      metaWechat: 'WeChat / Agent',
+      metaVideo: 'Video Channel',
       switchLangBtn: '中文',
       newsHeading: 'News',
       showMore: 'Show More',
@@ -109,9 +114,10 @@
       pubSearchPlaceholder: 'Search title, venue, year, or co-author…',
       pubLegend: '* Corresponding Author; my name is highlighted in bold',
       pubEmpty: 'No matching publications found.',
-      projHeading: 'Projects & Open-Source Tools',
-      projSubtitle: 'Actively maintained applications and open-source research tools; paper implementations are consolidated on GitHub',
+      projHeading: 'Projects, Outreach & Open-Source Tools',
+      projSubtitle: 'Actively maintained software projects, course-companion AI agent & science outreach channels, and open-source research tools',
       projGroupMaintained: 'Maintained Projects',
+      projGroupOutreach: 'Course Agent & AI Outreach',
       projGroupTools: 'Open-Source Tools',
       projMoreTitle: 'Paper Code Repositories',
       projMoreDesc: 'Official implementations for published papers are being consolidated on GitHub in chronological order, and linked via <code>[Code]</code> under <a href="#publications">Publications</a>.',
@@ -289,6 +295,8 @@
       <div class="meta-item"><span class="meta-chevron">›</span><span class="meta-label">${esc(U.metaOfficial)}:</span><span class="meta-val"><a href="${esc(P.swufeUrl)}" target="_blank" rel="noopener noreferrer">${esc(U.metaOfficialLink)}</a></span></div>
       <div class="meta-item"><span class="meta-chevron">›</span><span class="meta-label">${esc(U.metaPlatform)}:</span><span class="meta-val"><a href="${esc(P.echorialUrl)}" target="_blank" rel="noopener noreferrer">${lang === 'zh' ? '艾可瑞亚 Echorial' : 'Echorial'}</a> · <a href="https://github.com/minorfox/yujian-sign-translation" target="_blank" rel="noopener noreferrer">${lang === 'zh' ? '语见' : 'Yujian'}</a></span></div>
       <div class="meta-item"><span class="meta-chevron">›</span><span class="meta-label">${esc(U.metaOpenSource)}:</span><span class="meta-val"><a href="https://github.com/minorfox/FoxReader" target="_blank" rel="noopener noreferrer">FoxReader</a></span></div>
+      <div class="meta-item"><span class="meta-chevron">›</span><span class="meta-label">${esc(U.metaWechat)}:</span><span class="meta-val"><a href="#project-wensi-lili">${lang === 'zh' ? '问思狸狸 · swufe问思' : 'Wensi Lili (问思狸狸)'}</a></span></div>
+      <div class="meta-item"><span class="meta-chevron">›</span><span class="meta-label">${esc(U.metaVideo)}:</span><span class="meta-val"><a href="#project-yuanlairuci">${lang === 'zh' ? '元来如此（两分钟一个AI概念）' : 'Yuanlairuci (元来如此)'}</a></span></div>
     `;
 
     document.getElementById('about-copy-email').addEventListener('click', () => {
@@ -429,7 +437,7 @@
     });
   }
 
-  // 6. Projects & Open-Source Tools (#projects)
+  // 6. Projects, Outreach & Open-Source Tools (#projects)
   function renderProjectCard(p, wide) {
     const highlights = t(p.highlights) || [];
     const headerHtml = `
@@ -441,13 +449,18 @@
     `;
     const linksHtml = `
       <div class="project-links">
-        ${p.links.map(l => `<a href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">[${esc(t(l.label))}]</a>`).join('')}
+        ${p.links.map(l => {
+          if (l.copy) {
+            return `<button type="button" class="project-copy-btn" data-copy="${esc(l.copy)}" data-toast="${esc(t(l.toast))}">[${esc(t(l.label))}]</button>`;
+          }
+          return `<a href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">[${esc(t(l.label))}]</a>`;
+        }).join('')}
       </div>
     `;
 
     if (wide) {
       return `
-        <article class="project-item project-item-wide">
+        <article class="project-item project-item-wide" id="project-${esc(p.id)}">
           <div class="project-wide-main">
             ${headerHtml}
             <p class="project-desc">${esc(t(p.description))}</p>
@@ -464,7 +477,7 @@
     }
 
     return `
-      <article class="project-item">
+      <article class="project-item" id="project-${esc(p.id)}">
         ${headerHtml}
         <p class="project-desc">${esc(t(p.description))}</p>
         <p class="project-stack">${esc(p.stack.join(' · '))}</p>
@@ -478,7 +491,8 @@
     document.getElementById('proj-heading').textContent = U.projHeading;
     document.getElementById('proj-subtitle').textContent = U.projSubtitle;
 
-    const maintained = D.projects.filter(p => p.category !== 'tool');
+    const maintained = D.projects.filter(p => p.category === 'project');
+    const outreach = D.projects.filter(p => p.category === 'outreach');
     const tools = D.projects.filter(p => p.category === 'tool');
 
     const renderGroup = (title, items) => {
@@ -507,10 +521,18 @@
       </div>
     `;
 
-    document.getElementById('projects-grid').innerHTML =
+    const grid = document.getElementById('projects-grid');
+    grid.innerHTML =
       renderGroup(U.projGroupMaintained, maintained) +
+      renderGroup(U.projGroupOutreach, outreach) +
       renderGroup(U.projGroupTools, tools) +
       moreBar;
+
+    grid.querySelectorAll('.project-copy-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        copyText(btn.dataset.copy, btn.dataset.toast || btn.dataset.copy);
+      });
+    });
   }
 
   // 7. Teaching, Honors & Academic Service (#resume)

@@ -79,11 +79,11 @@ window.SITE_DATA = {
     bio: {
       zh: [
         '研究主线聚焦于<strong>生成过程中的上下文效应（Contextual Effects in Generation）</strong>，探索文本前后文、少样本示例、历史交互与结构关系如何影响模型的生成与判断，进而提升大语言模型（RAG、In-Context Learning、Agentic AI）、财经智能决策与时空轨迹学习在信息不足或干扰环境下的稳健性与可信度。',
-        '近五年在 IEEE TKDE、ACM SIGKDD、AAAI、IJCAI、EMNLP、ICDE、ACM SIGSPATIAL、IEEE T-ITS、IEEE TBD、IEEE TCYB、ACM TIST、Neural Networks、Information Fusion 等顶级会议与期刊发表论文 30 余篇，获 KSEM 2023 唯一最佳论文奖与四川省计算机学会科学技术一等奖，授权发明专利 10 余项；同时持续维护 <strong>艾可瑞亚（Echorial）</strong>、<strong>语见手语翻译</strong>等项目，并开发了开源文献阅读工具 <strong>FoxReader</strong>。',
+        '近五年在 IEEE TKDE、ACM SIGKDD、AAAI、IJCAI、EMNLP、ICDE、ACM SIGSPATIAL、IEEE T-ITS、IEEE TBD、IEEE TCYB、ACM TIST、Neural Networks、Information Fusion 等顶级会议与期刊发表论文 30 余篇，获 KSEM 2023 唯一最佳论文奖与四川省计算机学会科学技术一等奖，授权发明专利 10 余项；同时持续维护 <strong>艾可瑞亚（Echorial）</strong>、<strong>语见手语翻译</strong>等项目，运营公众号与伴学智能体 <strong>问思狸狸</strong>、AI 科普视频号 <strong>元来如此</strong>，并开发了开源文献阅读工具 <strong>FoxReader</strong>。',
       ],
       en: [
         'Research centers on <strong>Contextual Effects in Generation</strong>—investigating how surrounding text, demonstrations, historical trajectories, and relational graphs shape model outputs, introduce or mitigate bias, and govern decision reliability. This thread spans Natural Language Processing (RAG, In-Context Learning, Agentic AI), AI for Business & Financial Decision-Making, and Spatiotemporal Data Mining.',
-        'Published over 30 peer-reviewed papers in leading venues including IEEE TKDE, ACM SIGKDD, AAAI, IJCAI, EMNLP, ICDE, ACM SIGSPATIAL, IEEE T-ITS, IEEE TBD, IEEE TCYB, ACM TIST, Neural Networks, and Information Fusion, with 10+ invention patents and the Sole Best Paper Award at KSEM 2023. Alongside academic research, maintains projects including <strong>Echorial</strong> and <strong>Yujian</strong> (Chinese Sign Language translation), and builds the open-source paper reader <strong>FoxReader</strong>.',
+        'Published over 30 peer-reviewed papers in leading venues including IEEE TKDE, ACM SIGKDD, AAAI, IJCAI, EMNLP, ICDE, ACM SIGSPATIAL, IEEE T-ITS, IEEE TBD, IEEE TCYB, ACM TIST, Neural Networks, and Information Fusion, with 10+ invention patents and the Sole Best Paper Award at KSEM 2023. Alongside academic research, maintains projects including <strong>Echorial</strong> and <strong>Yujian</strong>, operates the WeChat account & course-companion agent <strong>Wensi Lili (问思狸狸)</strong> and AI explainer channel <strong>Yuanlairuci (元来如此)</strong>, and builds the open-source paper reader <strong>FoxReader</strong>.',
       ],
     },
     stats: [
@@ -1014,6 +1014,55 @@ window.SITE_DATA = {
       },
       links: [
         { label: { zh: 'GitHub 仓库', en: 'GitHub Repo' }, url: 'https://github.com/minorfox/yujian-sign-translation' },
+      ],
+    },
+    {
+      id: 'wensi-lili',
+      category: 'outreach',
+      name: '问思狸狸 · swufe问思',
+      badge: { zh: '微信公众号 & 课程伴学 Agent · 微信搜「问思狸狸」', en: 'WeChat Official Account & Course Agent · Search "问思狸狸"' },
+      icon: 'assets/wensi-icon.png',
+      tagline: {
+        zh: '面向《人工智能与现代科技》课程的微信公众号与专属 AI 伴学智能体',
+        en: 'WeChat Official Account & dedicated course-companion AI agent for CST122',
+      },
+      description: {
+        zh: '围绕《人工智能与现代科技》（CST122）课程维护的微信公众号与专属伴学智能体（swufe问思）。支持在公众号对话框内围绕课程概念、实验报错截图与练习题开展多轮启发式追问（单独发送“重新开始”即可重置对话记忆）；同时连载《元来如此》交互式概念图文栏目，配动态图解与「问思一下」情境判断卡，用生活与财经实例拆解 AI 核心机制。',
+        en: 'WeChat Official Account and dedicated course-companion AI agent (swufe问思) for SWUFE’s Artificial Intelligence & Modern Technology (CST122). Supports multi-turn Socratic Q&A on course concepts and lab troubleshooting screenshots directly inside WeChat, alongside interactive explainer articles under the Yuanlairuci column featuring animated diagrams and scenario-based self-check cards.',
+      },
+      stack: ['WeChat Official Account', 'Course AI Agent', 'Course Knowledge Base', 'Interactive Explainers'],
+      highlights: {
+        zh: ['微信对话框直连课程伴学 Agent「swufe问思」', '支持概念追问与实验报错图片解析', '连载《元来如此》交互式图解与「问思一下」判断卡'],
+        en: ['Direct WeChat Q&A via course agent "swufe问思"', 'Concept inquiry & lab screenshot troubleshooting', 'Interactive Yuanlairuci explainers & self-check cards'],
+      },
+      links: [
+        { label: { zh: '元来如此图文合集', en: 'Article Collection' }, url: 'https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU2OTc4NzQ5Ng==&action=getalbum&album_id=4754873356380274691#wechat_redirect' },
+        { label: { zh: '代表图文：AI/大模型/智能体', en: 'Featured: AI, LLMs & Agents' }, url: 'https://mp.weixin.qq.com/s/5X6AzB9aRt7AA8mm83DWfg' },
+        { label: { zh: '复制公众号名', en: 'Copy WeChat Name' }, copy: '问思狸狸', toast: { zh: '公众号名称已复制：问思狸狸（微信搜一搜关注）', en: 'Copied WeChat Official Account: 问思狸狸' } },
+      ],
+    },
+    {
+      id: 'yuanlairuci',
+      category: 'outreach',
+      name: '元来如此',
+      badge: { zh: '2026.09 开播 · 微信视频号 · 两分钟一个 AI 概念', en: 'Launched Sep 2026 · WeChat Channels · 2-Min AI Concepts' },
+      icon: 'assets/yuanlairuci-mark.svg',
+      tagline: {
+        zh: '以“反直觉祛魅”为主线的两分钟 AI 通识科普短视频栏目',
+        en: 'Two-minute counter-intuitive AI concept explainer video series on WeChat Channels',
+      },
+      description: {
+        zh: '微信视频号「元来如此-两分钟一个AI概念」以“反直觉祛魅”为核心，每条 2–3 分钟，结合校园日常、财经经管与学术核验场景，打碎一个常见误解、讲透一个核心机制。首批 10 集（词元、词向量、逐步生成、上下文窗口、上传资料≠训练模型、提示词、上下文学习、幻觉、RAG、引用与证据）已全部收录于合集「大模型与智能体」，并与「问思狸狸」公众号图文及伴学知识库联动更新。',
+        en: 'WeChat Channels series ("元来如此-两分钟一个AI概念") dedicated to counter-intuitive AI demystification. Each 2–3 minute episode unpacks one core AI concept using campus, finance, and academic verification scenarios. The first 10 episodes—spanning tokens, embeddings, autoregressive generation, context windows, RAG, hallucinations, and citation verification—are curated under the "LLMs & Agents" collection and linked with Wensi Lili articles.',
+      },
+      stack: ['WeChat Channels', 'AI Literacy', '大模型与智能体（已发 10 集）', '反直觉科普'],
+      highlights: {
+        zh: ['每集 2–3 分钟讲透一个 AI 核心概念与常见误区', '「大模型与智能体」合集已连续发布 10 集', '口播视频 → 公众号图文 → 课程伴学知识库联动'],
+        en: ['2–3 min episodes unpacking one AI mechanism per video', '10 episodes live in the "LLMs & Agents" collection', 'Cross-linked with WeChat articles & course knowledge base'],
+      },
+      links: [
+        { label: { zh: '复制视频号名', en: 'Copy Channel Name' }, copy: '元来如此-两分钟一个AI概念', toast: { zh: '视频号名称已复制：元来如此-两分钟一个AI概念（微信视频号搜索）', en: 'Copied WeChat Channel: 元来如此-两分钟一个AI概念' } },
+        { label: { zh: '同名图文合集', en: 'Companion Articles' }, url: 'https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU2OTc4NzQ5Ng==&action=getalbum&album_id=4754873356380274691#wechat_redirect' },
       ],
     },
     {
