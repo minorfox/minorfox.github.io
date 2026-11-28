@@ -325,7 +325,7 @@
     const U = UI[lang];
     document.getElementById('news-heading').textContent = U.newsHeading;
 
-    const visibleCount = newsExpanded ? D.news.length : Math.min(5, D.news.length);
+    const visibleCount = newsExpanded ? D.news.length : Math.min(7, D.news.length);
     const items = D.news.slice(0, visibleCount);
 
     document.getElementById('news-list').innerHTML = items
@@ -339,7 +339,7 @@
       .join('');
 
     const moreWrap = document.getElementById('news-more-wrap');
-    if (D.news.length > 5) {
+    if (D.news.length > 7) {
       moreWrap.innerHTML = `<button type="button" class="btn-outline" id="news-toggle-btn">${esc(newsExpanded ? U.showLess : U.showMore)}</button>`;
       document.getElementById('news-toggle-btn').addEventListener('click', () => {
         newsExpanded = !newsExpanded;

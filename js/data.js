@@ -108,6 +108,18 @@ window.SITE_DATA = {
       en: 'Launched personal project <strong><a href="https://echorial.com" target="_blank" rel="noopener noreferrer">Echorial</a></strong> (echorial.com), a personal capability training ground featuring campus anti-fraud verification sandboxes and an e-commerce AI-auditing workbench.',
     },
     {
+      date: '2026.10',
+      tag: { zh: '伴学', en: 'Agent' },
+      zh: '上线微信公众号 <strong><a href="#project-wensi-lili">问思狸狸</a></strong> 与《人工智能与现代科技》课程伴学智能体 <strong>swufe问思</strong>，并在<a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU2OTc4NzQ5Ng==&action=getalbum&album_id=4754873356380274691#wechat_redirect" target="_blank" rel="noopener noreferrer">《元来如此》合集</a>连载交互式 AI 概念图文。',
+      en: 'Launched the <strong><a href="#project-wensi-lili">Wensi Lili (问思狸狸)</a></strong> WeChat Official Account and course-companion AI agent <strong>swufe问思</strong> for CST122, alongside the interactive <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU2OTc4NzQ5Ng==&action=getalbum&album_id=4754873356380274691#wechat_redirect" target="_blank" rel="noopener noreferrer">Yuanlairuci article series</a>.',
+    },
+    {
+      date: '2026.09',
+      tag: { zh: '科普', en: 'Video' },
+      zh: '开播 AI 通识科普微信视频号 <strong><a href="#project-yuanlairuci">元来如此（两分钟一个 AI 概念）</a></strong>，以“反直觉祛魅”为主线已连续发布「大模型与智能体」合集 10 集短视频。',
+      en: 'Launched the WeChat Channels AI explainer series <strong><a href="#project-yuanlairuci">Yuanlairuci (元来如此)</a></strong>, publishing 10 short-form episodes in the "LLMs & Agents" collection.',
+    },
+    {
       date: '2026.08',
       tag: { zh: '开源', en: 'Open Source' },
       zh: '开源无障碍中国手语翻译工程仓库 <strong><a href="https://github.com/minorfox/yujian-sign-translation" target="_blank" rel="noopener noreferrer">语见（Yujian）</a></strong>（含微信小程序 MVP 与本地手语识别推理后端）。',
@@ -1045,7 +1057,7 @@ window.SITE_DATA = {
       id: 'yuanlairuci',
       category: 'outreach',
       name: '元来如此',
-      badge: { zh: '2026.09 开播 · 微信视频号 · 两分钟一个 AI 概念', en: 'Launched Sep 2026 · WeChat Channels · 2-Min AI Concepts' },
+      badge: { zh: '微信视频号 · 两分钟一个 AI 概念', en: 'WeChat Channels · 2-Min AI Concepts' },
       icon: 'assets/yuanlairuci-mark.svg',
       tagline: {
         zh: '以“反直觉祛魅”为主线的两分钟 AI 通识科普短视频栏目',
