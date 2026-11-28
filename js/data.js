@@ -1096,7 +1096,7 @@ window.SITE_DATA = {
     {
       group: { zh: '学术组织与社会任职', en: 'Academic & Professional Appointments' },
       items: {
-        zh: '四川省人工智能学会副秘书长、智能金融专委会秘书长；四川省高等教育学会计算机基础教育研究专业委员会 / 四川省高等院校计算机基础教育研究会第八届理事会理事（2024–）；西南财经大学本科课程思政教学指导专家；CCF YOCSEF 成都学术委员会学术秘书（2022–2023）。',
+        zh: '四川省人工智能学会副秘书长、智能金融专委会秘书长；四川省高等教育学会计算机基础教育研究专业委员会 / 四川省高等院校计算机基础教育研究会第八届理事会理事（2024–）；西南财经大学本科课程思政教学指导专家；CCF YOCSEF 成都学术委员会2022-2023年度学术秘书。',
         en: 'Deputy Secretary-General of the Sichuan Artificial Intelligence Society & Secretary-General of its Intelligent Finance Committee; Council Member, 8th Council of Sichuan Higher Education Society Computer Basic Education Research Committee (2024–); SWUFE Undergraduate Curriculum Advisory Expert; Academic Secretary, CCF YOCSEF Chengdu (2022–2023).',
       },
     },
