@@ -41,8 +41,8 @@ window.SITE_DATA = {
       en: 'NLP · RAG · In-Context Learning · AI for Business',
     },
     motto: {
-      zh: '科研向难求真知，课堂向活育新人，技术向善抵达人。',
-      en: 'Rigorous inquiry in research, clarity in teaching, and human-centered craft in technology.',
+      zh: 'Technology comes and goes; insight is forever.',
+      en: 'Technology comes and goes; insight is forever.',
     },
     city: {
       zh: '中国 · 四川成都',
