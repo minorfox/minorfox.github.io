@@ -116,8 +116,8 @@ window.SITE_DATA = {
     {
       date: '2026.09',
       tag: { zh: '科普', en: 'Video' },
-      zh: '开播 AI 通识科普微信视频号 <strong><a href="#project-yuanlairuci">元来如此（两分钟一个 AI 概念）</a></strong>，以“反直觉祛魅”为主线已连续发布「大模型与智能体」合集 10 集短视频。',
-      en: 'Launched the WeChat Channels AI explainer series <strong><a href="#project-yuanlairuci">Yuanlairuci (元来如此)</a></strong>, publishing 10 short-form episodes in the "LLMs & Agents" collection.',
+      zh: '开播微信视频号 <strong><a href="#project-yuanlairuci">元来如此（两分钟一个 AI 概念）</a></strong>，以“反直觉祛魅”为主题，持续发布 AI 通识科普短视频。',
+      en: 'Launched the WeChat Channels account <strong><a href="#project-yuanlairuci">Yuanlairuci (元来如此)</a></strong>, publishing short AI literacy videos themed around counter-intuitive demystification.',
     },
     {
       date: '2026.08',
